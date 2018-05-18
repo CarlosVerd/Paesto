@@ -7,20 +7,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import services.Iservices;
+import services.Service;
 
-@WebServlet("/servlet")
-public class servlet extends HttpServlet {
+
+@WebServlet("/ServletGestion")
+public class ServletGestion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+		private Iservices ser=new Service();
 
 
-    public servlet() {
+    public ServletGestion() {
         // TODO Auto-generated constructor stub
     }
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+		continuar(request, response);
 	}
 
 
@@ -28,5 +33,15 @@ public class servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+	protected void continuar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		ser.buscarNombre();
+		ser.altaProducto();
+		ser.bajaProducto();
+		ser.mostrarProductos();
+		
+	}
+
 
 }
