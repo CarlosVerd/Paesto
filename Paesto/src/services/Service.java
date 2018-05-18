@@ -5,7 +5,7 @@ import dao.Idatos;
 
 public class Service implements Iservices{
 
-	Idatos dat=new Datos();
+	private Idatos dat=new Datos();
 	
 	@Override
 	public void buscarNombre() {

@@ -19,7 +19,7 @@ public class ServletGestion extends HttpServlet {
 
 
     public ServletGestion() {
-        // TODO Auto-generated constructor stub
+      
     }
 
 
