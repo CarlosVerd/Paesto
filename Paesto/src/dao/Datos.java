@@ -1,100 +1,119 @@
 package dao;
 
+
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import com.mysql.jdbc.PreparedStatement;
+
+import model.Producto;
 
 public class Datos implements Idatos {
-	
-	
-	private static  Connection conection=null; 
-	private PreparedStatement guardar=null;
-	 
-	 
- 
+
+	private static Connection conection = null;
+	private PreparedStatement guardar = null;
+
 	/**
 	 * Conexion a uan base de datos de MySql
+	 * 
+	 * @return
 	 */
 
-	public void conexionBaseDatos(){
-	
-	try {	
+	public static Connection conexionBaseDatos() {
 
-	String driverClassName ="com.mysql.jdbc.Driver";
-	String driverUrl="jdbc:mysql://10.90.36.7:3306/ventaron";
-	
-	String user="admin";
-	String password="1111";
-	
-	Class.forName(driverClassName);
-		
-	conection=DriverManager.getConnection(driverUrl, user, password);
-	
-	} catch (ClassNotFoundException e) {
-		System.out.println("No se encuentra el driver");
-		e.printStackTrace();
-	} catch (SQLException e) {
-		System.out.println("Excepcion SQL: "+ e.getMessage());
-		System.out.println("Estado SQL: " + e.getSQLState());
-		System.out.println("Codigo de error: " +e.getErrorCode());
-		e.printStackTrace();
+		try {
+
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://10.90.36.7:3306/ventaron";
+
+			String user = "admin";
+			String password = "1111";
+
+			Class.forName(driverClassName);
+
+			conection = DriverManager.getConnection(driverUrl, user, password);
+
+		} catch (ClassNotFoundException e) {
+			System.out.println("No se encuentra el driver");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("Excepcion SQL: " + e.getMessage());
+			System.out.println("Estado SQL: " + e.getSQLState());
+			System.out.println("Codigo de error: " + e.getErrorCode());
+			e.printStackTrace();
+		}
+
+		return conection;
 	}
-	
-	
-	
-}
-	
+
 	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio) {
 		String insertTableSQL = "INSERT INTO ventaron.productos"
-				+ "(nombre, descripcion, rutaimagen, categoria,precio) VALUES"
-				+ "(?,?,?,?,?)";
-		
+				+ "(nombre, descripcion, rutaimagen, categoria,precio) VALUES" + "(?,?,?,?,?)";
+
 		try {
 			guardar = (PreparedStatement) conection.prepareStatement(insertTableSQL);
 
-			
 			guardar.setString(1, "juan");
 			guardar.setString(2, "carlos");
 			guardar.setString(3, "balcno");
 			guardar.setString(4, "balcno");
-			guardar.setFloat(5, 100f);	
-		// execute insert SQL stetement
-			System.out.println("--probando "+guardar);
-			guardar .executeUpdate();
-			
+			guardar.setFloat(5, 100f);
+			// execute insert SQL stetement
+			System.out.println("--probando " + guardar);
+			guardar.executeUpdate();
+
 			conection.close();
-		
+
 		} catch (SQLException e) {
-			System.out.println("Excepcion SQL: "+ e.getMessage());
+			System.out.println("Excepcion SQL: " + e.getMessage());
 			System.out.println("Estado SQL: " + e.getSQLState());
-			System.out.println("Codigo de error: " +e.getErrorCode());
+			System.out.println("Codigo de error: " + e.getErrorCode());
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	@Override
-	public void buscarNombre(String nombre) {
+	public Producto buscarNombre(String nombre) {
 		// TODO Auto-generated method stub
+
+		String sql = "SELECT FROM ventaron.productos WHERE nombre="+"'"+nombre+"'";
+
+		Producto a = new Producto();
+		try (
+				PreparedStatement sentencia = conexionBaseDatos().prepareStatement(sql);
+				ResultSet resultado = sentencia.executeQuery();
+				)
+
+		{
+			while(resultado.next()){
+				a.setNombre(resultado.getString("nombre"));
+				a.setDescripcion(resultado.getString("descripcion"));
+				a.setCategoria(resultado.getString("categoria"));
+				a.setPrecio(resultado.getFloat("precio"));
+				a.setRutaImagen(resultado.getString("rutaimagen"));
+			}
+			
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
 		
+		return a;
 	}
-
-
 
 	@Override
 	public void bajaProducto(String nombre) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mostrarProductos() {
 		// TODO Auto-generated method stub
-		
+
 	}
-
-
 
 }
