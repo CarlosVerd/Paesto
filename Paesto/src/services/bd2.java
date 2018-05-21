@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class bd2 {
 
-	public static void main(String[] args){
+	public static void mostrar(){
 		
 		
 		try {
@@ -38,7 +38,9 @@ public class bd2 {
 			System.out.println(n.getMessage()+"2");
 			
 		}
+	}
 	    
+	/*
 	public int Guardar(String nombres, String apellidos, String email, String celular, 
 	                   String direccion, String sexo){
 
@@ -92,5 +94,5 @@ public class bd2 {
 
 	    return resultado;
 	    
-	}
+	}*/
 }
