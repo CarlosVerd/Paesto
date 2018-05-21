@@ -75,11 +75,10 @@ public class Datos implements Idatos {
 
 	}
 
-	@Override
+	
 	public Producto buscarNombre(String nombre) {
-		// TODO Auto-generated method stub
 
-		String sql = "SELECT FROM ventaron.productos WHERE nombre="+"'"+nombre+"'";
+		String sql = "SELECT * FROM productos WHERE nombre="+"'"+nombre+"'";
 
 		Producto a = new Producto();
 		try (
