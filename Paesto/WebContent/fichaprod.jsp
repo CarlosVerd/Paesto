@@ -1,5 +1,6 @@
-
-<!DOCTYPE>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -91,7 +92,7 @@
 							<div class="col-md-8">
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
-										<a href="">Home</a> <a href="">Category Name</a> <a href="">Ron flor de caÃ±a</a>
+										<a href="">Home</a> <a href="">Category Name</a> <a href="">Ron flor de caña</a>
 									</div>
 
 									<div class="row">
@@ -107,7 +108,7 @@
 
 										<div class="col-sm-6">
 											<div class="product-inner">
-												<h2 class="product-name">Ron flor de caÃ±a</h2>
+												<h2 class="product-name">Ron flor de caña</h2>
 												<div class="product-inner-price">
 													<ins>$700.00</ins>
 													<del>$100.00</del>
