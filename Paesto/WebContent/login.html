@@ -1,41 +1,184 @@
 <!DOCTYPE html>
-<!--
-Proyecto: Restaurante
-Versión: 1
-Descripción: Formato HTML
--->
 <html>
-    <head>
-        <title>Login Web Ron</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/estilologin.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="header">
-                <br><h1><a href="index.html">Ronea Working</a></h1><br><br><br><br>
-                <h2>Accede a tu cuenta</h2>
-            </div>
-            <div id="main">
-                <form action="xxxx.html" method="post">
-                    <fieldset>
-                        <legend>Introduce usuario y contraseña</legend>
-                        <p>
-                            <label for="user">Usuario:</label>
-                            <input type="text" id="user" name="user" />
-                        </p>
-                        <p>
-                            <label for="password">Contraseña:</label>
-                            <input type="text" size="16" id="password" name="password" />
-                        </p>
-                        <p>
-                            <input type="submit" value="Acceder" />
-                        </p>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-    </body>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Random Login Form</title>
+
+    <style>
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(imagenes/playaRon.jpg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: 0;
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;
+	text-decoration: none;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+	text-decoration: none;
+}
+
+.header div span{
+	color: #f20c17 !important;
+}
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+.titulolog{
+	text-decoration: none;
+	color: white;
+}
+
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+            
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div><a href="index.html" class="titulolog" >Ron<span>Working</a></span></div>
+		</div>
+		<br>
+		<div class="login">
+				<input type="text" placeholder="username" name="user"><br>
+				<input type="password" placeholder="password" name="password"><br>
+				<input type="button" value="Login">
+				<div><a href="index.html">Registrate</a></div>
+		</div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+</body>
+
 </html>
