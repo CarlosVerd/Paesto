@@ -44,7 +44,7 @@ public class ServletGestion extends HttpServlet {
 		
 		String buscadorHome=request.getParameter("homeBuscador");
 		ser.buscarNombre(buscadorHome);
-		//producto=ser.buscarNombre(buscadorHome);
+		producto=ser.buscarNombre(buscadorHome);
 		request.setAttribute("styles", producto);
 		RequestDispatcher view = request.getRequestDispatcher("");
 		view.forward(request, response);
