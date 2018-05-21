@@ -119,11 +119,7 @@ public class Datos implements Idatos {
 		ArrayList<Producto> a = new ArrayList<>();
 		
 		try (
-<<<<<<< HEAD
-				PreparedStatement sentencia = (PreparedStatement) conection.createStatement();
-=======
 				PreparedStatement sentencia = conection.prepareStatement(sql);
->>>>>>> 0789fb4702ee9b29e46cac5c1c2e5bed6f267ce1
 				ResultSet resultado = sentencia.executeQuery();
 				)
 
