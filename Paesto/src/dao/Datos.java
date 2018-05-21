@@ -125,10 +125,12 @@ public class Datos implements Idatos {
 
 		{
 			
-			//for(int i=0;i<resultado.)
+			for(int i=0;i<10;i++){
+				
+			}
 			
 		} catch (SQLException e) {
-			//System.out.println(e.getMessage());
+			System.out.println(e.getMessage());
 		}
 		
 		return a;
