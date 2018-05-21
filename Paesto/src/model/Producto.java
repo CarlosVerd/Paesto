@@ -2,7 +2,7 @@ package model;
 
 public class Producto {
 	
-	private String nombre,descripcion,rutaImagen,categoria;
+	private String nombre,descripcion,rutaImagen,categoria = null;
 	private Float precio;
 	
 	
@@ -57,8 +57,8 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [nombre=" + nombre + ", descripcion=" + descripcion + ", rutaImagen=" + rutaImagen
-				+ ", categoria=" + categoria + ", precio=" + precio + "]";
+		return "nombre=" + nombre + ", descripcion=" + descripcion + ", rutaImagen=" + rutaImagen
+				+ ", categoria=" + categoria + ", precio=" + precio;
 	}
 	
 	
