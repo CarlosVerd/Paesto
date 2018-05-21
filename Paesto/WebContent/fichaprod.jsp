@@ -102,7 +102,7 @@
 										<div class="col-sm-6">
 											<div class="product-images">
 												<div class="product-main-img">
-													<img src="img/flor_de_cana_ron.jpg" alt="">
+													<img src="${Producto.rutaimagen}" alt="">
 												</div>
 
 
@@ -111,9 +111,9 @@
 
 										<div class="col-sm-6">
 											<div class="product-inner">
-												<h2 class="product-name">Ron flor de caña</h2>
+												<h2 class="product-name">${Producto.nombre} Ron flor de caña</h2>
 												<div class="product-inner-price">
-													<ins>$700.00</ins>
+													<ins>${Producto.precio } 700.00</ins>
 													<del>$100.00</del>
 												</div>
 
