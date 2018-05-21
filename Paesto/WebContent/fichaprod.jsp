@@ -111,7 +111,7 @@
 
 										<div class="col-sm-6">
 											<div class="product-inner">
-												<h2 class="product-name">${Producto.nombre} Ron flor de caña</h2>
+												<h2 class="product-name">${producto.nombre}</h2>
 												<div class="product-inner-price">
 													<ins>${Producto.precio } 700.00</ins>
 													<del>$100.00</del>
