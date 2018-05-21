@@ -81,7 +81,9 @@ public class Datos implements Idatos {
 		String sql = "SELECT * FROM productos WHERE nombre="+"'"+nombre+"'";
 
 		Producto a = new Producto();
+		conexionBaseDatos();
 		try (
+				
 				PreparedStatement sentencia = conexionBaseDatos().prepareStatement(sql);
 				ResultSet resultado = sentencia.executeQuery();
 				)
@@ -101,6 +103,7 @@ public class Datos implements Idatos {
 		}
 		
 		return a;
+		
 	}
 
 	@Override

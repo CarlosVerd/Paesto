@@ -43,12 +43,11 @@ public class ServletGestion extends HttpServlet {
 		Producto producto = null;
 		
 		String buscadorHome=request.getParameter("homeBuscador");
-		ser.buscarNombre(buscadorHome);
-		//producto=ser.buscarNombre(buscadorHome);
+		producto=ser.buscarNombre(buscadorHome);
 		request.setAttribute("styles", producto);
 		RequestDispatcher view = request.getRequestDispatcher("");
 		view.forward(request, response);
-		
+		System.out.println(producto.toString());
 		
 	}
 	

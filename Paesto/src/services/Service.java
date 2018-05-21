@@ -2,15 +2,17 @@ package services;
 
 import dao.Datos;
 import dao.Idatos;
+import model.Producto;
 
 public class Service implements Iservices{
 
 	private Idatos dat=new Datos();
 
 	@Override
-	public void buscarNombre(String nombre) {
-		dat.buscarNombre(nombre);
-		
+	public Producto buscarNombre(String nombre) {
+		Producto pro;
+		pro=dat.buscarNombre(nombre);
+		return pro;
 	}
 
 	@Override
