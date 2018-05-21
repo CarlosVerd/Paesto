@@ -1,12 +1,15 @@
 package control;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Producto;
 import services.Iservices;
 import services.Service;
 
@@ -26,22 +29,30 @@ public class ServletGestion extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		continuar(request, response);
+		
 	}
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		doGet(request, response);
+		
 	}
 	
 	protected void continuar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Producto producto = null;
 		
-		//ser.buscarNombre();
-		//ser.altaProducto();
-		//ser.bajaProducto();
-		//ser.mostrarProductos();
+		String buscadorHome=request.getParameter("homeBuscador");
+		ser.buscarNombre(buscadorHome);
+		//producto=ser.buscarNombre(buscadorHome);
+		request.setAttribute("styles", producto);
+		RequestDispatcher view = request.getRequestDispatcher("");
+		view.forward(request, response);
+		
 		
 	}
+	
+	
 
 
 }
