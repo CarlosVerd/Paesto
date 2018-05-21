@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+Proyecto: Restaurante
+Versión: 2e
+Descripción: Formato HTML
+-->
+<html>
+    <head>
+        <title>Restaurante v02e. Un servlet + Metodos + Anot</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/gestion.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                
+                <h2>Gestion de productos</h2>
+            </div>
+            <div id="menu">
+                <form action="Menu" method="post">
+                    <fieldset>
+                       <legend>Dar de alta un producto</legend>
+                           
+                        <p>
+                            <label for="nombre">Introduce nombre producto</label>
+                            <input type="text" id="nombre" name="nombre" />
+                        </p>
+                        <p>
+                            <label for="desc">Introduce descripción producto</label>
+                            <input type="text" id="desc" name="desc" />
+                        </p>
+                        <p>
+                            <label for="categoria">Introduce tipo de categoría</label>
+                            <input type="text" id="categoria" name="categoria" />
+                        </p>
+                        <p>
+                            <label for="categoria">Introduce precio en euros</label>
+                            <input type="text" id="categoria" name="categoria" />
+                        </p>
+                        <p>
+                            <label for="stock">Introduce ruta imagen del producto</label>
+                            <input type="text" id="stock" name="stock" />
+                        </p>
+                        <p>
+                            <input type="submit"  value="Realizar" />
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+             <div id="menu">
+                <form action="Menu" method="post">
+                    <fieldset>
+                       <legend>Buscar producto</legend>
+                           
+                        <p>
+                            <label for="nombre">Introduce nombre producto</label>
+                            <input type="text" id="nombreBuscar" name="nombreBuscar" />
+                        </p>
+
+                        <p>
+                            <input type="submit"  value="Buscar" />
+                        </p>
+                    </fieldset>
+                    <input type="hidden" name="opcion" value="p1">
+                </form>
+                
+               
+                
+            </div>
+            <div id="menu">
+                <form action="Menu" method="post">
+                    <fieldset>
+                       <legend>Modificar un producto</legend>
+                           
+                        <p>
+                            <label for="nombre">Introduce nombre producto</label>
+                            <input type="text" id="modificar" name="modificar" />
+                        </p>
+                                                <p>
+                        <label for="categoria">Introduce precio en euros</label>
+                            <input type="text" id="categoriaModificar" name="categoriaModificar" />
+                        </p>
+                        <p>
+                            <label for="stock">Indique el Stock del producto</label>
+                            <input type="text" id="stockCambiar" name="stockCambiar" />
+                        </p>
+
+                        <p>
+                            <input type="submit"  value="Buscar" />
+                        </p>
+                    </fieldset>
+                    <input type="hidden" name="opcion" value="p1">
+                </form>   
+            </div>
+            
+            <div id="menu">
+                <form action="Menu" method="post">
+                    <fieldset>
+                       <legend>Eliminar un producto</legend>
+                           
+                        <p>
+                            <label for="nombre">Introduce nombre producto</label>
+                            <input type="text" id="eliminar" name="eliminar" />
+                        </p>
+
+                        <p>
+                            <input type="submit"  value="Eliminar" />
+                        </p>
+                    </fieldset>
+                    <input type="hidden" name="opcion" value="p1">
+                </form>   
+            </div>
+            
+        </div>
+    </body>
+</html>
