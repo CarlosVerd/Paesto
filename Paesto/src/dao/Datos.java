@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import model.Producto;
 
@@ -16,7 +17,7 @@ public class Datos implements Idatos {
 	private PreparedStatement guardar = null;
 
 	/**
-	 * Conexion a uan base de datos de MySql
+	 * Conexion a una base de datos de MySql
 	 * 
 	 * @return
 	 */
@@ -111,9 +112,26 @@ public class Datos implements Idatos {
 
 	}
 
-	@Override
-	public void mostrarProductos() {
-		// TODO Auto-generated method stub
+	public ArrayList<Producto> mostrarProductos() {
+
+		String sql = "SELECT * FROM productos";
+
+		ArrayList<Producto> a = new ArrayList<>();
+		
+		try (
+				PreparedStatement sentencia = conexionBaseDatos().prepareStatement(sql);
+				ResultSet resultado = sentencia.executeQuery();
+				)
+
+		{
+			
+			//for(int i=0;i<resultado.)
+			
+		} catch (SQLException e) {
+			//System.out.println(e.getMessage());
+		}
+		
+		return a;
 
 	}
 
