@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,7 +114,7 @@
 											<div class="product-inner">
 												<h2 class="product-name">${producto.nombre}</h2>
 												<div class="product-inner-price">
-													<ins>${Producto.precio } 700.00</ins>
+													<ins>${producto.precio }</ins>
 													<del>$100.00</del>
 												</div>
 
@@ -137,24 +138,15 @@
 													<ul class="product-tab" role="tablist">
 														<li role="presentation" class="active"><a
 															href="#home" aria-controls="home" role="tab"
-															data-toggle="tab">Description</a></li>
+															data-toggle="tab">Ron Añejo</a></li>
 														<li role="presentation"><a href="#profile"
 															aria-controls="profile" role="tab" data-toggle="tab">Reviews</a></li>
 													</ul>
 													<div class="tab-content">
 														<div role="tabpanel" class="tab-pane fade in active"
 															id="home">
-															<h2>Product Description</h2>
-															<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-																elit. Nam tristique, diam in consequat iaculis, est
-																purus iaculis mauris, imperdiet facilisis ante ligula at
-																nulla. Quisque volutpat nulla risus, id maximus ex
-																aliquet ut. Suspendisse potenti. Nulla varius lectus id
-																turpis dignissim porta. Quisque magna arcu, blandit quis
-																felis vehicula, feugiat gravida diam. Nullam nec turpis
-																ligula. Aliquam quis blandit elit, ac sodales nisl.
-																Aliquam eget dolor eget elit malesuada aliquet. In
-																varius lorem lorem, semper bibendum lectus lobortis ac.</p>
+															<h2>Descripción</h2>
+															<p>${producto.descripcion}</p>
 
 															<p>Mauris placerat vitae lorem gravida viverra.
 																Mauris in fringilla ex. Nulla facilisi. Etiam
