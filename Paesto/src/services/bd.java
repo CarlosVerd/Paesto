@@ -16,9 +16,9 @@ public class bd {
 				
 				Class.forName("com.mysql.jdbc.Driver");
 				
-				Connection con = DriverManager.getConnection("jdbc:mysql://10.90.36.5:3306/almacen","usuario","1234");
+				Connection con = DriverManager.getConnection("jdbc:mysql://localhost/almacen","root","1111");
 				
-				PreparedStatement consulta = con.prepareStatement("SELECT * FROM producto");
+				PreparedStatement consulta = con.prepareStatement("SELECT * FROM productos");
 				ResultSet resultado = consulta.executeQuery();
 				
 				while(resultado.next()){
