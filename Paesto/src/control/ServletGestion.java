@@ -36,10 +36,10 @@ public class ServletGestion extends HttpServlet {
 	
 	protected void continuar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		ser.buscarNombre();
-		ser.altaProducto();
-		ser.bajaProducto();
-		ser.mostrarProductos();
+		//ser.buscarNombre();
+		//ser.altaProducto();
+		//ser.bajaProducto();
+		//ser.mostrarProductos();
 		
 	}
 
