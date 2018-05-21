@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -67,17 +67,19 @@
 
 				<!-- End mainmenu area -->
 				<div>
-				<div id="menu">
-					
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li class="current_page_item"><a href="gestionProductos.html">Productos</a></li>
-						<li><a href="#">Contacto</a></li>
-						<li><a href="login.html">Login</a></li>
-						<li><a href="register.html">Registrarse</a></li>
-						
-					</ul>
-				</div></div>
+					<div id="menu">
+
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							<li class="current_page_item"><a
+								href="gestionProductos.html">Productos</a></li>
+							<li><a href="#">Contacto</a></li>
+							<li><a href="login.html">Login</a></li>
+							<li><a href="register.html">Registrarse</a></li>
+
+						</ul>
+					</div>
+				</div>
 
 
 
@@ -85,14 +87,15 @@
 					<div class="zigzag-bottom"></div>
 					<div class="container">
 						<div class="row">
-							
 
-								
+
+
 
 							<div class="col-md-8">
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
-										<a href="">Home</a> <a href="">Category Name</a> <a href="">Ron flor de caña</a>
+										<a href="">Home</a> <a href="">Category Name</a> <a href="">Ron
+											flor de caña</a>
 									</div>
 
 									<div class="row">
@@ -199,24 +202,24 @@
 
 
 
-				<!-- Latest jQuery form server -->
-				<script src="https://code.jquery.com/jquery.min.js"></script>
+									<!-- Latest jQuery form server -->
+									<script src="https://code.jquery.com/jquery.min.js"></script>
 
-				<!-- Bootstrap JS form CDN -->
-				<script
-					src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+									<!-- Bootstrap JS form CDN -->
+									<script
+										src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-				<!-- jQuery sticky menu -->
-				<script src="js/owl.carousel.min.js"></script>
-				<script src="js/jquery.sticky.js"></script>
+									<!-- jQuery sticky menu -->
+									<script src="js/owl.carousel.min.js"></script>
+									<script src="js/jquery.sticky.js"></script>
 
-				<!-- jQuery easing -->
-				<script src="js/jquery.easing.1.3.min.js"></script>
+									<!-- jQuery easing -->
+									<script src="js/jquery.easing.1.3.min.js"></script>
 
-				<!-- Main Script -->
-				<script src="js/main.js"></script>
-			</div>
-		</div>
-	</div>
+									<!-- Main Script -->
+									<script src="js/main.js"></script>
+								</div>
+							</div>
+						</div>
 </body>
 </html>

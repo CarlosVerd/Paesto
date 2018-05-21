@@ -21,7 +21,7 @@ public class Datos implements Idatos {
 	 * @return
 	 */
 
-	public static Connection conexionBaseDatos() {
+	public  void conexionBaseDatos() {
 
 		try {
 
@@ -45,7 +45,6 @@ public class Datos implements Idatos {
 			e.printStackTrace();
 		}
 
-		return conection;
 	}
 
 	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio) {
@@ -84,7 +83,7 @@ public class Datos implements Idatos {
 		conexionBaseDatos();
 		try (
 				
-				PreparedStatement sentencia = conexionBaseDatos().prepareStatement(sql);
+				PreparedStatement sentencia = conection.prepareStatement(sql);
 				ResultSet resultado = sentencia.executeQuery();
 				)
 
