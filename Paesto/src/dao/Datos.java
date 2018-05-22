@@ -17,7 +17,6 @@ public class Datos implements Idatos {
 	/**
 	 * Conexion a una base de datos de MySql
 	 * 
-	 * @return
 	 */
 
 	public void conexionBaseDatos() {
@@ -47,10 +46,12 @@ public class Datos implements Idatos {
 	}
 
 	/**
+	 * <p>
 	 * Este método recibe los parametros de nombre, descripcion, rutaimagen,
 	 * categoria,precio y los introduce en la base de datos en sus respectivas
 	 * columnas en la base de datos, no devuelve nada ya solo se dedica ha
 	 * introducir filas en la base
+	 * </p>
 	 */
 
 	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio) {
@@ -58,7 +59,7 @@ public class Datos implements Idatos {
 				+ "(nombre, descripcion, rutaimagen, categoria,precio) VALUES" + "(?,?,?,?,?)";
 
 		try {
-			guardar = (PreparedStatement) conection.prepareStatement(insertTableSQL);
+			guardar = conection.prepareStatement(insertTableSQL);
 
 			guardar.setString(1, "juan");
 			guardar.setString(2, "carlos");
@@ -79,9 +80,23 @@ public class Datos implements Idatos {
 
 	}
 
+	/**
+	 * @author orlando
+	 * 
+	 *         <p>
+	 *         Metodo el cual recibe un nombre y realiza una consulta buscando
+	 *         en la base de datos y si encuentra un nombre que correspondiente
+	 *         con el dado, guarda todos los atributos encontrados en un objeto
+	 *         de tipo Producto
+	 *         </p>
+	 * 
+	 * @param Ingresa
+	 *            un String
+	 * 
+	 * @return retorna uno objeto de productos
+	 */
 	public Producto buscarNombre(String nombre) {
 
-		conexionBaseDatos();
 		String sql = "SELECT * FROM productos WHERE nombre=" + "'" + nombre + "'";
 
 		Producto a = new Producto();
@@ -113,10 +128,13 @@ public class Datos implements Idatos {
 	}
 
 	/**
+	 * @author orlando
 	 * 
-	 * @param
+	 *         <p>
+	 *         Metodo el cual realiza una consulta a la base de datos y
 	 * 
-	 * @return
+	 * @return retorna un ArrayList de productos
+	 * 
 	 */
 	public ArrayList<Producto> mostrarProductos() {
 
