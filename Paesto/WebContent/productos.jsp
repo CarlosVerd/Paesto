@@ -67,6 +67,8 @@
 										<img src="${producto.rutaImagen}" width="143" height="143" alt=""
 											class="alignleft border" />
 									<p>${producto.descripcion}</p>
+								
+									</label><input type="button" id='${producto.nombre}' value='Ficha detallada'/>
 								</div>
 							</div>
 						 </c:forEach>
