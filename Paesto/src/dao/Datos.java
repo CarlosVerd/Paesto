@@ -112,11 +112,13 @@ public class Datos implements Idatos {
 
 	}
 
+	//no funciona
 	public ArrayList<Producto> mostrarProductos() {
 
 		String sql = "SELECT * FROM productos";
 
 		ArrayList<Producto> a = new ArrayList<>();
+		Producto b = new Producto();
 		
 		try (
 				PreparedStatement sentencia = conection.prepareStatement(sql);
@@ -124,9 +126,15 @@ public class Datos implements Idatos {
 				)
 
 		{
+
 			
-			for(int i=0;i<10;i++){
-				
+			while(resultado.next()){
+				b.setNombre(resultado.getString("nombre"));
+				b.setDescripcion(resultado.getString("descripcion"));
+				b.setCategoria(resultado.getString("categoria"));
+				b.setPrecio(resultado.getFloat("precio"));
+				b.setRutaImagen(resultado.getString("rutaimagen"));
+				a.add(b);
 			}
 			
 		} catch (SQLException e) {
