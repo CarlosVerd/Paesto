@@ -12,7 +12,7 @@ public class prueba {
 		
 		Producto a = b.buscarNombre("barcelo");
 		
-		System.out.println(a.getNombre()+a.getDescripcion()+a.getRutaImagen());
+		System.out.println(a.getNombre());
 		
 		ArrayList<Producto> z = b.mostrarProductos();
 		

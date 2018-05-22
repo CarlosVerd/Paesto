@@ -45,10 +45,12 @@ public class Datos implements Idatos {
 		}
 
 	}
-	
+
 	/**
-	 * Este método recibe los parametros de nombre, descripcion, rutaimagen, categoria,precio y los introduce en la base de datos en sus respectivas columnas
-	 * en la base de datos, no devuelve nada ya solo se dedica ha introducir filas en la base
+	 * Este método recibe los parametros de nombre, descripcion, rutaimagen,
+	 * categoria,precio y los introduce en la base de datos en sus respectivas
+	 * columnas en la base de datos, no devuelve nada ya solo se dedica ha
+	 * introducir filas en la base
 	 */
 
 	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio) {
@@ -78,14 +80,9 @@ public class Datos implements Idatos {
 	}
 
 	public Producto buscarNombre(String nombre) {
-<<<<<<< HEAD
-		
-		conexionBaseDatos();
-		String sql = "SELECT * FROM productos WHERE nombre="+"'"+nombre+"'";
-=======
 
+		conexionBaseDatos();
 		String sql = "SELECT * FROM productos WHERE nombre=" + "'" + nombre + "'";
->>>>>>> ee972f545e27c228814d2e190a388b34eb91ca3d
 
 		Producto a = new Producto();
 		conexionBaseDatos();
@@ -111,60 +108,32 @@ public class Datos implements Idatos {
 
 	}
 
-	@Override
 	public void bajaProducto(String nombre) {
-		// TODO Auto-generated method stub
-
+		System.out.println();
 	}
 
-<<<<<<< HEAD
 	/**
 	 * 
 	 * @param
 	 * 
 	 * @return
 	 */
-=======
-	// no funciona
->>>>>>> ee972f545e27c228814d2e190a388b34eb91ca3d
 	public ArrayList<Producto> mostrarProductos() {
 
 		String sql = "SELECT * FROM productos";
 
 		ArrayList<Producto> a = new ArrayList<>();
-<<<<<<< HEAD
-		
+
 		conexionBaseDatos();
-		try (
-				PreparedStatement sentencia = conection.prepareStatement(sql);
-				ResultSet resultado = sentencia.executeQuery();
-				)
-
-		{
-
-			
-			while(resultado.next()){
-				a.add(new Producto(resultado.getString("nombre"),
-								   resultado.getString("descripcion"),
-								   resultado.getString("rutaimagen"),
-								   resultado.getString("categoria"),
-								   resultado.getFloat("precio")));
-=======
-		Producto b = new Producto();
-
 		try (PreparedStatement sentencia = conection.prepareStatement(sql);
 				ResultSet resultado = sentencia.executeQuery();)
 
 		{
 
 			while (resultado.next()) {
-				b.setNombre(resultado.getString("nombre"));
-				b.setDescripcion(resultado.getString("descripcion"));
-				b.setCategoria(resultado.getString("categoria"));
-				b.setPrecio(resultado.getFloat("precio"));
-				b.setRutaImagen(resultado.getString("rutaimagen"));
-				a.add(b);
->>>>>>> ee972f545e27c228814d2e190a388b34eb91ca3d
+				a.add(new Producto(resultado.getString("nombre"), resultado.getString("descripcion"),
+						resultado.getString("rutaimagen"), resultado.getString("categoria"),
+						resultado.getFloat("precio")));
 			}
 
 		} catch (SQLException e) {
@@ -172,7 +141,5 @@ public class Datos implements Idatos {
 		}
 
 		return a;
-
 	}
-
 }
