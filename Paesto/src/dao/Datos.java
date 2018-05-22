@@ -77,7 +77,8 @@ public class Datos implements Idatos {
 
 	
 	public Producto buscarNombre(String nombre) {
-
+		
+		conexionBaseDatos();
 		String sql = "SELECT * FROM productos WHERE nombre="+"'"+nombre+"'";
 
 		Producto a = new Producto();
@@ -112,14 +113,19 @@ public class Datos implements Idatos {
 
 	}
 
-	//no funciona
+	/**
+	 * 
+	 * @param
+	 * 
+	 * @return
+	 */
 	public ArrayList<Producto> mostrarProductos() {
 
 		String sql = "SELECT * FROM productos";
 
 		ArrayList<Producto> a = new ArrayList<>();
-		Producto b = new Producto();
 		
+		conexionBaseDatos();
 		try (
 				PreparedStatement sentencia = conection.prepareStatement(sql);
 				ResultSet resultado = sentencia.executeQuery();
@@ -129,12 +135,11 @@ public class Datos implements Idatos {
 
 			
 			while(resultado.next()){
-				b.setNombre(resultado.getString("nombre"));
-				b.setDescripcion(resultado.getString("descripcion"));
-				b.setCategoria(resultado.getString("categoria"));
-				b.setPrecio(resultado.getFloat("precio"));
-				b.setRutaImagen(resultado.getString("rutaimagen"));
-				a.add(b);
+				a.add(new Producto(resultado.getString("nombre"),
+								   resultado.getString("descripcion"),
+								   resultado.getString("rutaimagen"),
+								   resultado.getString("categoria"),
+								   resultado.getFloat("precio")));
 			}
 			
 		} catch (SQLException e) {

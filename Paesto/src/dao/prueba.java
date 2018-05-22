@@ -10,9 +10,13 @@ public class prueba {
 		// TODO Auto-generated method stub
 		Datos b = new Datos();
 		
-		Producto a = b.buscarNombre("pepon");
+		Producto a = b.buscarNombre("barcelo");
 		
-		System.out.println(a.getRutaImagen());
+		System.out.println(a.getNombre()+a.getDescripcion()+a.getRutaImagen());
+		
+		ArrayList<Producto> z = b.mostrarProductos();
+		
+		System.out.println(z.size());
 	}
 
 }
