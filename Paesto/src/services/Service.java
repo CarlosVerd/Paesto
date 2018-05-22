@@ -1,5 +1,7 @@
 package services;
 
+import java.util.ArrayList;
+
 import dao.Datos;
 import dao.Idatos;
 import model.Producto;
@@ -28,8 +30,10 @@ public class Service implements Iservices{
 	}
 
 	@Override
-	public void mostrarProductos() {
-		dat.mostrarProductos();	
+	public ArrayList<Producto> mostrarProductos() {
+		ArrayList<Producto> col;
+		col=dat.mostrarProductos();
+		return col;
 	}
 	
 
