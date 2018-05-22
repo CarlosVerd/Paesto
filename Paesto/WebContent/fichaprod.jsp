@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,15 +95,15 @@
 							<div class="col-md-8">
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
-										<a href="">Home</a> <a href="">Category Name</a> <a href="">Ron
-											flor de caña</a>
+										<a href="">Home</a> <a href="">${producto.categoria}</a> <a href="">Ron
+											flor de caÃ±a</a>
 									</div>
 
 									<div class="row">
 										<div class="col-sm-6">
 											<div class="product-images">
 												<div class="product-main-img">
-													<img src="${Producto.rutaimagen}" alt="">
+													<img src="${producto.rutaImagen}" alt="">
 												</div>
 
 
@@ -114,8 +114,8 @@
 											<div class="product-inner">
 												<h2 class="product-name">${producto.nombre}</h2>
 												<div class="product-inner-price">
-													<ins>${producto.precio }</ins>
-													<del>$100.00</del>
+													<ins>${producto.precio } â‚¬</ins>
+													<del>100.00 â‚¬</del>
 												</div>
 
 												<form action="" class="cart">
@@ -138,22 +138,18 @@
 													<ul class="product-tab" role="tablist">
 														<li role="presentation" class="active"><a
 															href="#home" aria-controls="home" role="tab"
-															data-toggle="tab">Ron Añejo</a></li>
+															data-toggle="tab">Ron AÃ±ejo</a></li>
 														<li role="presentation"><a href="#profile"
 															aria-controls="profile" role="tab" data-toggle="tab">Reviews</a></li>
 													</ul>
 													<div class="tab-content">
 														<div role="tabpanel" class="tab-pane fade in active"
 															id="home">
-															<h2>Descripción</h2>
+															<h2>DescripciÃ³n</h2>
+															<br/>
 															<p>${producto.descripcion}</p>
 
-															<p>Mauris placerat vitae lorem gravida viverra.
-																Mauris in fringilla ex. Nulla facilisi. Etiam
-																scelerisque tincidunt quam facilisis lobortis. In
-																malesuada pulvinar neque a consectetur. Nunc aliquam
-																gravida purus, non malesuada sem accumsan in. Morbi vel
-																sodales libero.</p>
+															<p></p>
 														</div>
 														<div role="tabpanel" class="tab-pane fade" id="profile">
 															<h2>Reviews</h2>
