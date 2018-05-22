@@ -1,7 +1,5 @@
 package dao;
 
-
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -22,7 +20,7 @@ public class Datos implements Idatos {
 	 * @return
 	 */
 
-	public  void conexionBaseDatos() {
+	public void conexionBaseDatos() {
 
 		try {
 
@@ -47,6 +45,11 @@ public class Datos implements Idatos {
 		}
 
 	}
+	
+	/**
+	 * Este método recibe los parametros de nombre, descripcion, rutaimagen, categoria,precio y los introduce en la base de datos en sus respectivas columnas
+	 * en la base de datos, no devuelve nada ya solo se dedica ha introducir filas en la base
+	 */
 
 	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio) {
 		String insertTableSQL = "INSERT INTO ventaron.productos"
@@ -60,7 +63,6 @@ public class Datos implements Idatos {
 			guardar.setString(3, "balcno");
 			guardar.setString(4, "balcno");
 			guardar.setFloat(5, 100f);
-			// execute insert SQL stetement
 			System.out.println("--probando " + guardar);
 			guardar.executeUpdate();
 
@@ -75,35 +77,32 @@ public class Datos implements Idatos {
 
 	}
 
-	
 	public Producto buscarNombre(String nombre) {
 
-		String sql = "SELECT * FROM productos WHERE nombre="+"'"+nombre+"'";
+		String sql = "SELECT * FROM productos WHERE nombre=" + "'" + nombre + "'";
 
 		Producto a = new Producto();
 		conexionBaseDatos();
 		try (
-				
+
 				PreparedStatement sentencia = conection.prepareStatement(sql);
-				ResultSet resultado = sentencia.executeQuery();
-				)
+				ResultSet resultado = sentencia.executeQuery();)
 
 		{
-			while(resultado.next()){
+			while (resultado.next()) {
 				a.setNombre(resultado.getString("nombre"));
 				a.setDescripcion(resultado.getString("descripcion"));
 				a.setCategoria(resultado.getString("categoria"));
 				a.setPrecio(resultado.getFloat("precio"));
 				a.setRutaImagen(resultado.getString("rutaimagen"));
 			}
-			
-			
+
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
-		
+
 		return a;
-		
+
 	}
 
 	@Override
@@ -112,23 +111,20 @@ public class Datos implements Idatos {
 
 	}
 
-	//no funciona
+	// no funciona
 	public ArrayList<Producto> mostrarProductos() {
 
 		String sql = "SELECT * FROM productos";
 
 		ArrayList<Producto> a = new ArrayList<>();
 		Producto b = new Producto();
-		
-		try (
-				PreparedStatement sentencia = conection.prepareStatement(sql);
-				ResultSet resultado = sentencia.executeQuery();
-				)
+
+		try (PreparedStatement sentencia = conection.prepareStatement(sql);
+				ResultSet resultado = sentencia.executeQuery();)
 
 		{
 
-			
-			while(resultado.next()){
+			while (resultado.next()) {
 				b.setNombre(resultado.getString("nombre"));
 				b.setDescripcion(resultado.getString("descripcion"));
 				b.setCategoria(resultado.getString("categoria"));
@@ -136,11 +132,11 @@ public class Datos implements Idatos {
 				b.setRutaImagen(resultado.getString("rutaimagen"));
 				a.add(b);
 			}
-			
+
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
-		
+
 		return a;
 
 	}
