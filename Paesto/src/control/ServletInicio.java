@@ -23,8 +23,8 @@ public class ServletInicio extends HttpServlet {
 
 	private Iservices ser = new Service();
 
-	public ServletInicio() {}
-	
+	public ServletInicio() {
+	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -40,15 +40,19 @@ public class ServletInicio extends HttpServlet {
 
 	}
 
-	protected void continuar(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void continuar(HttpServletRequest request, HttpServletResponse response) {
 		ArrayList<Producto> col = null;
 		col = ser.mostrarProductos();
 		System.out.println(col);
 		request.setAttribute("colron", col);
 		RequestDispatcher view = request.getRequestDispatcher("productos.jsp");
-		view.forward(request, response);
-		
+		try {
+			view.forward(request, response);
+		} catch (ServletException | IOException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+
 		System.out.println(col);
 
 	}
