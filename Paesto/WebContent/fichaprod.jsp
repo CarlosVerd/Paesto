@@ -73,7 +73,7 @@
 						<ul>
 							<li><a href="index.jsp">Inicio</a></li>
 							<li class="current_page_item"><a
-								href="gestionProductos.html">Productos</a></li>
+								href="ServletInicio">Productos</a></li>
 							<li><a href="#">Contacto</a></li>
 							<li><a href="login.html">Login</a></li>
 							<li><a href="register.html">Registrarse</a></li>

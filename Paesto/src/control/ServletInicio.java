@@ -46,7 +46,7 @@ public class ServletInicio extends HttpServlet {
 		col = ser.mostrarProductos();
 		System.out.println(col);
 		request.setAttribute("colron", col);
-		RequestDispatcher view = request.getRequestDispatcher("index.html");
+		RequestDispatcher view = request.getRequestDispatcher("productos.jsp");
 		view.forward(request, response);
 		
 		System.out.println(col);
