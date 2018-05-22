@@ -54,6 +54,7 @@ public class Datos implements Idatos {
 	 * </p>
 	 */
 
+	@Override
 	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio) {
 		String insertTableSQL = "INSERT INTO ventaron.productos"
 				+ "(nombre, descripcion, rutaimagen, categoria,precio) VALUES" + "(?,?,?,?,?)";
@@ -94,6 +95,8 @@ public class Datos implements Idatos {
 	 * 
 	 * @return retorna uno objeto de productos
 	 */
+	
+	@Override
 	public Producto buscarNombre(String nombre) {
 
 		String sql = "SELECT * FROM productos WHERE nombre=" + "'" + nombre + "'";
@@ -122,6 +125,7 @@ public class Datos implements Idatos {
 
 	}
 
+	@Override
 	public void bajaProducto(String nombre) {
 		System.out.println();
 	}
@@ -136,6 +140,8 @@ public class Datos implements Idatos {
 	 * @return retorna un ArrayList de productos
 	 * 
 	 */
+	
+	@Override
 	public ArrayList<Producto> mostrarProductos() {
 
 		String sql = "SELECT * FROM productos";

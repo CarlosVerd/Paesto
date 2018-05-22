@@ -39,17 +39,24 @@ public class ServletBuscador extends HttpServlet {
 		
 	}
 	
-	protected void continuar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void continuar(HttpServletRequest request, HttpServletResponse response)  {
 		Producto producto = null;
 		
 		String buscadorHome=request.getParameter("homeBuscador");
 		producto=ser.buscarNombre(buscadorHome);
 		request.setAttribute("producto", producto);
 		RequestDispatcher view = request.getRequestDispatcher("fichaprod.jsp");
-		view.forward(request, response);
+		try {
+			view.forward(request, response);
+		} catch (ServletException | IOException e) {
+			System.out.println(e.getLocalizedMessage());
+		}
 		System.out.println(producto);
 		
 	}
+	
+	
+	
 	
 	
 
