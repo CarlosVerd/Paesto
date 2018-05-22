@@ -18,12 +18,12 @@ import services.Service;
  * Servlet implementation class ServletIincio
  */
 @WebServlet("/ServletIincio")
-public class ServletIincio extends HttpServlet {
+public class ServletInicio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Iservices ser = new Service();
 
-	public ServletIincio() {}
+	public ServletInicio() {}
 	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
