@@ -90,8 +90,7 @@ public class Datos implements Idatos {
 	 *         de tipo Producto
 	 *         </p>
 	 * 
-	 * @param Ingresa
-	 *            un String
+	 * @param Ingresa un String
 	 * 
 	 * @return retorna uno objeto de productos
 	 */
@@ -131,7 +130,8 @@ public class Datos implements Idatos {
 	 * @author orlando
 	 * 
 	 *         <p>
-	 *         Metodo el cual realiza una consulta a la base de datos y
+	 *         Metodo el cual realiza una consulta a la base de datos
+	 *         </p>
 	 * 
 	 * @return retorna un ArrayList de productos
 	 * 
