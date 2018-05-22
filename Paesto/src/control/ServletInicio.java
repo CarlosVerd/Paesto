@@ -53,8 +53,6 @@ public class ServletInicio extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		System.out.println(col);
-
 	}
 
 }
