@@ -18,7 +18,7 @@ import services.Service;
 public class ServletBuscador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-		private Iservices ser=new Service();
+	private Iservices ser=new Service();
 
 
     public ServletBuscador() {
@@ -44,10 +44,10 @@ public class ServletBuscador extends HttpServlet {
 		
 		String buscadorHome=request.getParameter("homeBuscador");
 		producto=ser.buscarNombre(buscadorHome);
-		request.setAttribute("styles", producto);
+		request.setAttribute("producto", producto);
 		RequestDispatcher view = request.getRequestDispatcher("fichaprod.jsp");
 		view.forward(request, response);
-		System.out.println(producto.toString());
+		System.out.println(producto);
 		
 	}
 	
