@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.*"%>
 <!DOCTYPE html>
 
@@ -39,10 +40,22 @@
 				<div id="page-bgtop">
 					<div id="page-bgbtm">
 						<div id="content">
-							<div class="post">
+						     <!-- menu.getPrimeros().darPlatos(0).getNombre() 
+                            <c:forEach var="plato" items="${menuDia.menu[0].listaPlatos}">
+                               
+                                <input type='radio' name='primero' value='${plato.nombre}' />
+                                ${plato.nombre} |
+                            </c:forEach>
+                            
+                            -->
+					<c:forEach var="producto" items="${colron}">					
+						<div class="post">
+						
 								<h2 class="title">
-									<p>Bienvenido a Ronea Working </p>
+									${producto.nombre}
 								</h2>
+						
+						
 								<p class="meta">
 									Posted by <a href="#">Someone</a> on July 10, 2011
 									&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments
@@ -51,52 +64,13 @@
 								</p>
 								<div class="entry">
 									<p>
-										<img src="images/img02.jpg" width="143" height="143" alt=""
-											class="alignleft border" />This is <strong>Wood
-											Working </strong>, a free, fully standards-compliant CSS template
-										designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.
-										The picture in this template is from <a
-											href="http://pdohoto.org">PDPhoto.org</a>. This free template
-										is released under the <a href="http://templated.co/license">Creative
-											Commons Attribution</a> license, so you’re pretty much free to do
-										whatever you want with it (even use it commercially) provided
-										you give us credit for it. Have fun :)
-									</p>
-									<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis.
-										Nam bibendum. In nulla tortor, elementum ipsum. Proin
-										imperdiet est. Phasellus dapibus semper urna. Pellentesque
-										ornare, orci in felis. Donec ut ante. In id eros. Suspendisse
-										lacus turpis at sem. Sed lacus. Donec lectus. Nullam pretium
-										nibh ut turpis.</p>
+										<img src="${producto.rutaImagen}" width="143" height="143" alt=""
+											class="alignleft border" />
+									<p>${producto.descripcion}</p>
 								</div>
 							</div>
-							
-							<div class="post">
-								<h2 class="title">
-									<a href="#">Phasellus pellentesque turpis </a>
-								</h2>
-								<p class="meta">
-									Posted by <a href="#">Someone</a> on July 8, 2011
-									&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments
-										(64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full
-										article</a>
-								</p>
-								<div class="entry">
-									<p>
-										<img src="images/img02.jpg" width="143" height="143" alt=""
-											class="alignleft border" />Sed lacus. Donec lectus. Nullam
-										pretium nibh ut turpis. Nam bibendum. In nulla tortor,
-										elementum vel, tempor at, varius non, purus. Mauris vitae nisl
-										nec metus placerat consectetuer. Donec ipsum. Proin imperdiet
-										est. Pellentesque ornare, orci in consectetuer hendrerit, urna
-										elit eleifend nunc. Sed lacus. Donec lectus. Nullam pretium
-										nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel,
-										tempor at, varius non, purus. Mauris vitae nisl nec metus
-										placerat consectetuer.
-									</p>
-								</div>
-							</div>
-						</div>
+						 </c:forEach>
+						
 						<!-- end #content -->
 						<div id="sidebar">
 							<div id="search">

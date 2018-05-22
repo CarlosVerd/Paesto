@@ -72,7 +72,7 @@
 					<div id="menu">
 
 						<ul>
-							<li><a href="index.jsp">Inicio</a></li>
+							<li><a href="index.html">Inicio</a></li>
 							<li class="current_page_item"><a
 								href="ServletInicio">Productos</a></li>
 							<li><a href="#">Contacto</a></li>
