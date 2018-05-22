@@ -14,14 +14,14 @@ import services.Iservices;
 import services.Service;
 
 
-@WebServlet("/ServletGestion")
-public class ServletGestion extends HttpServlet {
+@WebServlet("/ServletBuscador")
+public class ServletBuscador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 		private Iservices ser=new Service();
 
 
-    public ServletGestion() {
+    public ServletBuscador() {
       
     }
 
