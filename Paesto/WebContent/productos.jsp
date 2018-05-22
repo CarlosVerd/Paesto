@@ -27,8 +27,8 @@
 			<!-- end #header -->
 			<div id="menu">
 				<ul>
-					<li class="index.html"><a href="#">Inicio</a></li>
-					<li><a href="current_page_item">Productos</a></li>
+					<li> <a href="index.html">Inicio</a></li>
+					<li class="current_page_item"><a href="#">Productos</a></li>
 					<li><a href="#">Contacto</a></li>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
@@ -68,7 +68,7 @@
 											class="alignleft border" />
 									<p>${producto.descripcion}</p>
 								
-									</label><input type="button" id='${producto.nombre}' value='Ficha detallada'/>
+									<input type="button" id='${producto.nombre}' value='Ficha detallada'/>
 								</div>
 							</div>
 						 </c:forEach>
