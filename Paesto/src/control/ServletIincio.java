@@ -23,13 +23,8 @@ public class ServletIincio extends HttpServlet {
 
 	private Iservices ser = new Service();
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public ServletIincio() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	public ServletIincio() {}
+	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -53,6 +48,8 @@ public class ServletIincio extends HttpServlet {
 		request.setAttribute("colron", col);
 		RequestDispatcher view = request.getRequestDispatcher("index.jsp");
 		view.forward(request, response);
+		
+		System.out.println(col);
 
 	}
 
