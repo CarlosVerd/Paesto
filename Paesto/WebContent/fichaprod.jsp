@@ -95,8 +95,7 @@
 							<div class="col-md-8">
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
-										<a href="">Home</a> <a href="">${producto.categoria}</a> <a href="">Ron
-											flor de caña</a>
+										<a href="">Home</a> <a href="">${producto.categoria}</a> <a href="">${producto.nombre}</a>
 									</div>
 
 									<div class="row">
