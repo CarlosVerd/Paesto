@@ -153,7 +153,7 @@
 								<form method="get" action="ServletBuscador">
 									<fieldset>
 										<input type="text" name="homeBuscador" id="homeBuscador"
-											size="20" value="buscar por marca..." /> <input
+											size="20" autocomplete='off'/> <input
 											type="submit" id="search-submit" value="GO" />
 									</fieldset>
 								</form>
