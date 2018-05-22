@@ -44,15 +44,29 @@ public class ServletBuscador extends HttpServlet {
 		
 		String buscadorHome=request.getParameter("homeBuscador");
 		producto=ser.buscarNombre(buscadorHome);
-		request.setAttribute("producto", producto);
-		RequestDispatcher view = request.getRequestDispatcher("fichaprod.jsp");
-		try {
-			view.forward(request, response);
-		} catch (ServletException | IOException e) {
-			System.out.println(e.getLocalizedMessage());
-		}
-		System.out.println(producto);
 		
+		if(producto.getNombre() == null || buscadorHome == ""){
+			
+			RequestDispatcher view = request.getRequestDispatcher("index.html");
+			try {
+				view.forward(request, response);
+			} catch (ServletException | IOException e) {
+				System.out.println(e.getLocalizedMessage());
+			}
+			System.out.println("Error");
+			
+			
+		}else{
+			request.setAttribute("producto", producto);
+			RequestDispatcher view = request.getRequestDispatcher("fichaprod.jsp");
+			try {
+				view.forward(request, response);
+			} catch (ServletException | IOException e) {
+				System.out.println(e.getLocalizedMessage());
+			}
+			System.out.println(producto);
+			
+		}
 	}
 	
 	
