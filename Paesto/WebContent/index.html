@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-<%@ page import="java.util.*"%>
+
 <!DOCTYPE html>
 
 <html>
@@ -26,8 +24,8 @@
 			<!-- end #header -->
 			<div id="menu">
 				<ul>
-					<li class=""><a href="#">Inicio</a></li>
-					<li><a href="" >Productos</a></li>
+					<li class="current_page_item"><a href="#">Inicio</a></li>
+					<li><a href="gestionProductos.html">Productos</a></li>
 					<li><a href="#">Contacto</a></li>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
@@ -153,7 +151,7 @@
 								<form method="get" action="ServletBuscador">
 									<fieldset>
 										<input type="text" name="homeBuscador" id="homeBuscador"
-											size="20" value="buscar por marca..." /> <input
+											size="20" placeholder="introduce marca a buscar..."/> <input
 											type="submit" id="search-submit" value="GO" />
 									</fieldset>
 								</form>
