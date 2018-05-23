@@ -65,11 +65,11 @@ public class Datos implements Idatos {
 		try {
 			guardar = conection.prepareStatement(insertTableSQL);
 
-			guardar.setString(1, "juan");
-			guardar.setString(2, "carlos");
-			guardar.setString(3, "balcno");
-			guardar.setString(4, "balcno");
-			guardar.setFloat(5, 100f);
+			guardar.setString(1, nombre);
+			guardar.setString(2, descripcion);
+			guardar.setString(3, rutaImagen);
+			guardar.setString(4, categoria);
+			guardar.setFloat(5, precio);
 			System.out.println("--probando " + guardar);
 			guardar.executeUpdate();
 
