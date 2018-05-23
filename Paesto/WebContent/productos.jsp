@@ -74,7 +74,7 @@
 								</div>
 							</div>
 						 </c:forEach>
-						
+					</div>
 						<!-- end #content -->
 						<div id="sidebar">
 							<div id="search">
