@@ -17,13 +17,13 @@ import services.Service;
 /**
  * Servlet implementation class ServletIincio
  */
-@WebServlet("/ServletIincio")
-public class ServletInicio extends HttpServlet {
+@WebServlet("/ServletProductos")
+public class ServletProductos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Iservices ser = new Service();
 
-	public ServletInicio() {
+	public ServletProductos() {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

@@ -74,7 +74,7 @@
 						<ul>
 							<li><a href="index.html">Inicio</a></li>
 							<li class="current_page_item"><a
-								href="ServletInicio">Productos</a></li>
+								href="ServletProductos">Productos</a></li>
 							<li><a href="#">Contacto</a></li>
 							<li><a href="login.html">Login</a></li>
 							<li><a href="register.html">Registrarse</a></li>
