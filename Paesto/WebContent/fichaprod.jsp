@@ -38,7 +38,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head> <!-- End header area -->
+</head>
+<!-- End header area -->
 <body>
 
 	<div class="site-branding-area">
@@ -125,7 +126,8 @@
 
 												<div class="product-inner-category">
 													<p>
-														Categoria: <a href="ServletCategoria?cat=${producto.categoria}">${producto.categoria}</a>.
+														Categoria: <a
+															href="ServletCategoria?cat=${producto.categoria}">${producto.categoria}</a>.
 													</p>
 												</div>
 
@@ -188,24 +190,27 @@
 
 
 
-									<!-- Latest jQuery form server -->
-									<script src="https://code.jquery.com/jquery.min.js"></script>
+				<!-- Latest jQuery form server -->
+				<script src="https://code.jquery.com/jquery.min.js"></script>
 
-									<!-- Bootstrap JS form CDN -->
-									<script
-										src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+				<!-- Bootstrap JS form CDN -->
+				<script
+					src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-									<!-- jQuery sticky menu -->
-									<script src="js/owl.carousel.min.js"></script>
-									<script src="js/jquery.sticky.js"></script>
+				<!-- jQuery sticky menu -->
+				<script src="js/owl.carousel.min.js"></script>
+				<script src="js/jquery.sticky.js"></script>
 
-									<!-- jQuery easing -->
-									<script src="js/jquery.easing.1.3.min.js"></script>
+				<!-- jQuery easing -->
+				<script src="js/jquery.easing.1.3.min.js"></script>
 
-									<!-- Main Script -->
-									<script src="js/main.js"></script>
-								</div>
-							</div>
-						</div>
+				<!-- Main Script -->
+				<script src="js/main.js"></script>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>&copy; LucaTic Factory S.A. 2018. Reservados todos los derechos</p>
+	</div>
 </body>
 </html>
