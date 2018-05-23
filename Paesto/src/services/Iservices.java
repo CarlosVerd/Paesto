@@ -10,5 +10,6 @@ public interface Iservices {
 	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio);
 	public void bajaProducto(String nombre);
 	public ArrayList<Producto> mostrarProductos();
+	public ArrayList<Producto> mostrarCategorias(String tipo);
 
 }

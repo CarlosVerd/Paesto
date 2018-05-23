@@ -36,6 +36,11 @@ public class Service implements Iservices{
 		return col;
 	}
 	
+	public ArrayList<Producto> mostrarCategorias(String tipo) {
+		ArrayList<Producto> col;
+		col=dat.mostrarCategorias(tipo);
+		return col;
+	}
 
 
 }

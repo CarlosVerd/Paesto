@@ -44,7 +44,7 @@ public class ServletCategoria extends HttpServlet {
 		ArrayList<Producto> categoria = null;
 		
 		String pasarCategoria=request.getParameter("cat");
-		categoria = ser.listaProductos(pasarCategoria);
+		categoria = ser.mostrarCategorias(pasarCategoria);
 		System.out.println(categoria);
 		request.setAttribute("categoria", categoria);
 		RequestDispatcher view = request.getRequestDispatcher("categorias.jsp");
