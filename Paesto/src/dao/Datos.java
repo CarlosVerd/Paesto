@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import model.Producto;
@@ -130,7 +131,20 @@ public class Datos implements Idatos {
 
 	@Override
 	public void bajaProducto(String nombre) {
-		System.out.println();
+
+		String sql = "DELETE FROM productos WHERE nombre=" + "'" + nombre + "'";
+		
+		
+		conexionBaseDatos();
+		try {
+				
+				PreparedStatement sentencia = conection.prepareStatement(sql);
+
+			sentencia.executeUpdate();
+			
+		}catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	/**
@@ -183,4 +197,5 @@ public class Datos implements Idatos {
 			
 		return categoria;
 	}
+	
 }
