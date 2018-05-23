@@ -67,8 +67,10 @@
 										<img src="${producto.rutaImagen}" width="143" height="143" alt=""
 											class="alignleft border" />
 									<p>${producto.descripcion}</p>
-								
-									<input type="button" id='${producto.nombre}' value='Ficha detallada'/>
+								<form method="post" action="ServletBuscador">
+									<input type="submit" value='Ficha detallada'/>
+									<input type="hidden" name="homeBuscador" id="homeBuscador" value="${producto.nombre}"/>
+								</form>
 								</div>
 							</div>
 						 </c:forEach>
