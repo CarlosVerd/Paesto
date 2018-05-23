@@ -21,11 +21,11 @@ import services.Service;
 public class ServeltGestion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private Iservices ser=new Service();
+	private Iservices ser = new Service();
 	private ArrayList<Producto> productos;
-	
 
-	public ServeltGestion() {}
+	public ServeltGestion() {
+	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -42,18 +42,31 @@ public class ServeltGestion extends HttpServlet {
 	}
 
 	protected void continuar(HttpServletRequest request, HttpServletResponse response) {
+
+		String operacion = request.getParameter("operacion");
 		
 		ArrayList<Producto> col = null;
 		col = ser.mostrarProductos();
-		request.setAttribute("colron", col);
-		RequestDispatcher view = request.getRequestDispatcher("listadogestion.jsp");
-		try {
-			view.forward(request, response);
-		} catch (ServletException | IOException e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
+
+		if (operacion.equals("listado")) {
+			
+
+			request.setAttribute("colron", col);
+			RequestDispatcher view = request.getRequestDispatcher("listadogestion.jsp");
+			try {
+				view.forward(request, response);
+			} catch (ServletException | IOException e) {
+				System.out.println(e.getMessage());
+				e.printStackTrace();
+			}
 		}
 		
+		else if(){
+			
+		}
+		
+		
+
 	}
 
 }
