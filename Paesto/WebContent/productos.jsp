@@ -83,14 +83,16 @@
 							<ul>
 								<li>
 									<h2>
-										<Strong>Descripcion</Strong>
+										<Strong>Descripción</Strong>
 									</h2>
-									<p>Mauris vitae nisl nec metus placerat perdiet est.
-										Phasellus dapibus semper consectetuer hendrerit.</p>
+									<p>El ron es una de las bebidas espirituosas de mayor diversidad de estilos en el mundo 
+									y en Ronea Working queremos ofrecerte la mayor y mejor oferta en rones a los precios más competitivos 
+									del mercado online. Prueba nuestros exclusivos 
+									rones, ya sea blanco o añejo y deléitate con su calidad y los matices de sus sabores.</p>
 								</li>
 								<li>
 									<h2>
-										<Strong>Categorias</Strong>
+										<Strong>Categorías</Strong>
 									</h2>
 									<ul>
 										<li><a href="ServletCategoria?cat=blanco">Ron Blanco</a></li>
