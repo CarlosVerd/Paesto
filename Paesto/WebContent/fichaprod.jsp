@@ -33,8 +33,6 @@
 <link href="styleindex.css" rel="stylesheet" type="text/css"
 	media="screen" />
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -78,7 +76,7 @@
 									<li class="dropdown dropdown-small"><a
 										data-toggle="dropdown" data-hover="dropdown"
 										class="dropdown-toggle" href="#"><span class="key">Categorias
-												</span><span class="value"></span><b class="caret"></b></a>
+										</span><span class="value"></span><b class="caret"></b></a>
 										<ul class="dropdown-menu">
 											<li><a href="#">English</a></li>
 											<li><a href="#">French</a></li>
@@ -139,8 +137,7 @@
 
 												<div class="product-inner-category">
 													<p>
-														Category: <a href="">Summer</a>. Tags: <a href="">awesome</a>,
-														<a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>.
+														Categoria: <a href="ServletCategoria?cat=${producto.categoria}">${producto.categoria}</a>.
 													</p>
 												</div>
 
@@ -192,11 +189,14 @@
 														</div>
 													</div>
 												</div>
-
 											</div>
 										</div>
 									</div>
-
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
 
