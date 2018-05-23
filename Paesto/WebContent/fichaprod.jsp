@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,13 +73,22 @@
 
 						<ul>
 							<li><a href="index.html">Inicio</a></li>
-							<li class="current_page_item"><a
-								href="ServletProductos">Productos</a></li>
-							<li><a href="#">Contacto</a></li>
+							<li class="current_page_item"><a href="ServletProductos">Productos</a></li>
+							<li><ul class="list-unstyled list-inline">
+									<li class="dropdown dropdown-small"><a
+										data-toggle="dropdown" data-hover="dropdown"
+										class="dropdown-toggle" href="#"><span class="key">Categorias
+												</span><span class="value"></span><b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">English</a></li>
+											<li><a href="#">French</a></li>
+										</ul></li>
+								</ul></li>
 							<li><a href="login.html">Login</a></li>
 							<li><a href="register.html">Registrarse</a></li>
 
 						</ul>
+
 					</div>
 				</div>
 
@@ -96,8 +105,8 @@
 							<div class="col-md-8">
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
-										<a href="index.html">Inicio</a> > <a href="">${producto.categoria}</a> > 
-										<a href="">${producto.nombre}</a>
+										<a href="index.html">Inicio</a> > <a href="">${producto.categoria}</a>
+										> <a href="">${producto.nombre}</a>
 									</div>
 
 									<div class="row">
@@ -147,7 +156,7 @@
 														<div role="tabpanel" class="tab-pane fade in active"
 															id="home">
 															<h2>Descripción</h2>
-															<br/>
+															<br />
 															<p>${producto.descripcion}</p>
 
 															<p></p>

@@ -33,6 +33,7 @@
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
 					<li><a href="#">Carrito</a></li>
+
 				</ul>
 			</div>
 			<!-- end #menu -->
