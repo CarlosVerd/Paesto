@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11pt;
+    background-color:#bbb;
+}
+#body{
+    text-align:center;
+}
+#body p.centrado {
+    padding-left:30px;
+}
+#body a {
+    color:sienna;
+}
+h2 {
+    border: 1px #000 solid;
+    border: ridge;
+    text-align:center;
+}
+#contenedor {
+    width:550px;
+}
+.mensajes{
+    color:#fff;
+    text-align: center;
+    font-weight: bolder;
+}
+table, tr, td, th{
+    border: 1px #000 solid;
+    border-collapse: collapse;
+    padding:7px;
+}
+.centrado{
+    text-align: center;
+}
+th{
+    color: #fff;
+    background-color:#000;
+}
+td{
+    background-color:lightblue;
+}
+#listado{
+    width: 100%;
+    text-align: center;
+}
