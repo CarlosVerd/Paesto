@@ -40,18 +40,12 @@
 				<div id="page-bgtop">
 					<div id="page-bgbtm">
 						<div id="content">
+
 							<c:forEach var="producto" items="${colron}">
 								<div class="post">
 
 									<h2 class="title">${producto.nombre}</h2>
 
-
-									<p class="meta">
-										Posted by <a href="#">Someone</a> on July 10, 2011
-										&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments
-											(64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full
-											article</a>
-									</p>
 									<div class="entry">
 										<p>
 											<img src="${producto.rutaImagen}" width="143" height="143"
@@ -64,99 +58,85 @@
 										</form>
 									</div>
 								</div>
-<<<<<<< HEAD
-							</div>
-						 </c:forEach>
-					</div>
+							</c:forEach>
+						</div>
+
+
+
+
+
+
 						<!-- end #content -->
 						<div id="sidebar">
 							<div id="search">
-								<h2>Buscador</h2>
+								<h2>
+									<Strong>Buscador</Strong>
+								</h2>
 								<form method="get" action="ServletBuscador">
 									<fieldset>
 										<input type="text" name="homeBuscador" id="homeBuscador"
-											size="20" placeholder="introduce marca a buscar..."/> <input
+											size="20" placeholder="introduce marca a buscar..." /> <input
 											type="submit" id="search-submit" value="GO" />
 									</fieldset>
 								</form>
 							</div>
 							<ul>
 								<li>
-									<h2>Descripción</h2>
+									<h2>
+										<Strong>Descripcion</Strong>
+									</h2>
 									<p>Mauris vitae nisl nec metus placerat perdiet est.
 										Phasellus dapibus semper consectetuer hendrerit.</p>
 								</li>
 								<li>
-									<h2>Categorias</h2>
+									<h2>
+										<Strong>Categorias</Strong>
+									</h2>
 									<ul>
 										<li><a href="#">Ron Blanco</a></li>
 										<li><a href="#">Ron Añejo</a></li>
-=======
-							</c:forEach>
->>>>>>> 62637e935b2b1083ebf984dcce1a8cc68f6fe4ce
-
-							<!-- end #content -->
-							<div id="sidebar">
-								<div id="search">
-									<h2>Buscador</h2>
-									<form method="get" action="ServletBuscador">
-										<fieldset>
-											<input type="text" name="homeBuscador" id="homeBuscador"
-												size="20" placeholder="introduce marca a buscar..." /> <input
-												type="submit" id="search-submit" value="GO" />
-										</fieldset>
-									</form>
-								</div>
-								<ul>
-									<li>
-										<h2>Descripción</h2>
-										<p>Mauris vitae nisl nec metus placerat perdiet est.
-											Phasellus dapibus semper consectetuer hendrerit.</p>
-									</li>
-									<li>
-										<h2>Categorias</h2>
-										<ul>
-											<li><a href="#">Ron Blanco</a></li>
-											<li><a href="#">Ron Añejo</a></li>
-
-										</ul>
-									</li>
-									<li>
-										<h2>Top ventas</h2>
-										<ul>
-											<li><a href="#">Aliquam libero</a></li>
-											<li><a href="#">Consectetuer adipiscing elit</a></li>
-											<li><a href="#">Metus aliquam pellentesque</a></li>
-											<li><a href="#">Suspendisse iaculis mauris</a></li>
-											<li><a href="#">Urnanet non molestie semper</a></li>
-											<li><a href="#">Proin gravida orci porttitor</a></li>
-										</ul>
-									</li>
-									<li>
-										<h2>Recomendados</h2>
-										<ul>
-											<li><a href="#">Aliquam libero</a></li>
-											<li><a href="#">Consectetuer adipiscing elit</a></li>
-											<li><a href="#">Metus aliquam pellentesque</a></li>
-											<li><a href="#">Suspendisse iaculis mauris</a></li>
-											<li><a href="#">Urnanet non molestie semper</a></li>
-											<li><a href="#">Proin gravida orci porttitor</a></li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-							<!-- end #sidebar -->
-							<div style="clear: both;">&nbsp;</div>
+									</ul>
+								</li>
+								<li>
+									<h2>
+										<Strong>Top ventas</Strong>
+									</h2>
+									<ul>
+										<li><a href="#">Aliquam libero</a></li>
+										<li><a href="#">Consectetuer adipiscing elit</a></li>
+										<li><a href="#">Metus aliquam pellentesque</a></li>
+										<li><a href="#">Suspendisse iaculis mauris</a></li>
+										<li><a href="#">Urnanet non molestie semper</a></li>
+										<li><a href="#">Proin gravida orci porttitor</a></li>
+									</ul>
+								</li>
+								<li>
+									<h2>
+										<Strong>Recomendados</Strong>
+									</h2>
+									<ul>
+										<li><a href="#">Aliquam libero</a></li>
+										<li><a href="#">Consectetuer adipiscing elit</a></li>
+										<li><a href="#">Metus aliquam pellentesque</a></li>
+										<li><a href="#">Suspendisse iaculis mauris</a></li>
+										<li><a href="#">Urnanet non molestie semper</a></li>
+										<li><a href="#">Proin gravida orci porttitor</a></li>
+									</ul>
+								</li>
+							</ul>
 						</div>
+						<!-- end #sidebar -->
+						<div style="clear: both;">&nbsp;</div>
 					</div>
 				</div>
 			</div>
+			<!-- end #page -->
+			<div id="footer">
+				<p>&copy; LucaTic Factory S.A. 2018. Reservados todos los
+					derechos</p>
+			</div>
+			<!-- end #footer -->
 		</div>
-		<!-- end #page -->
-		<div id="footer">
-			<p>&copy; LucaTic Factory S.A. 2018. Reservados todos los
-				derechos</p>
-		</div>
-		<!-- end #footer -->
+	</div>
 </body>
 </html>
