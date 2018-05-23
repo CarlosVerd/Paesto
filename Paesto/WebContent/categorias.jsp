@@ -28,8 +28,8 @@
 			<div id="menu">
 				<ul>
 					<li><a href="index.html">Inicio</a></li>
-					<li class="current_page_item"><a href="#">Productos</a></li>
-					<li><a href="#">Contacto</a></li>
+					<li class="#"><a href="#">Productos</a></li>
+					<li><a href="current_page_item">Categorías</a></li>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
 					<li><a href="#">Carrito</a></li>
@@ -60,12 +60,6 @@
 								</div>
 							</c:forEach>
 						</div>
-
-
-
-
-
-
 						<!-- end #content -->
 						<div id="sidebar">
 							<div id="search">

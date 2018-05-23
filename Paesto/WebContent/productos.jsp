@@ -93,8 +93,8 @@
 										<Strong>Categorias</Strong>
 									</h2>
 									<ul>
-										<li><a href="#">Ron Blanco</a></li>
-										<li><a href="#">Ron Añejo</a></li>
+										<li><a href="ServletCategoria?cat=blanco">Ron Blanco</a></li>
+										<li><a href="ServletCategoria?cat=ejo">Ron Añejo</a></li>
 									</ul>
 								</li>
 								<li>
