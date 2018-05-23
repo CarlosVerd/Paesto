@@ -7,16 +7,8 @@ import model.Producto;
 public class prueba {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Datos b = new Datos();
-		
-		Producto a = b.buscarNombre("barcelo");
-		
-		System.out.println(a.getNombre());
-		
-		ArrayList<Producto> z = b.mostrarProductos();
-		
-		System.out.println(z.size());
+
+		System.out.println(new FerPrueba().mostrarProductos("ron blanco"));
 	}
 
 }

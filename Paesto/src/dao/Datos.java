@@ -166,4 +166,18 @@ public class Datos implements Idatos {
 
 		return a;
 	}
+	
+	public ArrayList<Producto> mostrarCategorias(String tipo){
+
+		ArrayList<Producto> productos=mostrarProductos();
+		ArrayList<Producto> categoria=new ArrayList<>();
+		
+		for(int i=0;i<productos.size();i++){
+			if(productos.get(i).getCategoria().equalsIgnoreCase(tipo)){
+				categoria.add(productos.get(i));	
+			}
+		}
+			
+		return categoria;
+	}
 }
