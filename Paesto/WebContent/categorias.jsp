@@ -12,6 +12,8 @@
 <title>Ronea Working</title>
 <link href="styleindex.css" rel="stylesheet" type="text/css"
 	media="screen" />
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
 </head>
 <body>
 	<div id="wrapper">
