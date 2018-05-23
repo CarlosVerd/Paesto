@@ -173,7 +173,7 @@ public class Datos implements Idatos {
 		ArrayList<Producto> categoria=new ArrayList<>();
 		
 		for(int i=0;i<productos.size();i++){
-			if(productos.get(i).getCategoria().equalsIgnoreCase(tipo)){
+			if(productos.get(i).getCategoria().contains(tipo)){
 				categoria.add(productos.get(i));	
 			}
 		}
