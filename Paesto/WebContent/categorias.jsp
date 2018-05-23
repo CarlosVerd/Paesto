@@ -19,7 +19,7 @@
 			<div id="header">
 				<div id="logo">
 					<h1>
-						<a href="#"> Ronea Working </a>
+						<a href="index.html"> Ronea Working </a>
 					</h1>
 					<p>Design by LucaTic</p>
 				</div>

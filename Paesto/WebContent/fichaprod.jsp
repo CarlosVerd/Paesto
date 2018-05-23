@@ -37,11 +37,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
+</head> <!-- End header area -->
 <body>
-
-	<div class="header-area"></div>
-	<!-- End header area -->
 
 	<div class="site-branding-area">
 		<div class="container">
@@ -49,7 +46,7 @@
 				<div class="col-sm-6" id="wrapper-bgbtm">
 					<div id="logo">
 						<h1>
-							<a href="#"> Ronea Working </a>
+							<a href="index.html"> Ronea Working </a>
 						</h1>
 						<p>Design by LucaTic</p>
 					</div>
@@ -68,7 +65,6 @@
 				<!-- End mainmenu area -->
 				<div>
 					<div id="menu">
-
 						<ul>
 							<li><a href="index.html">Inicio</a></li>
 							<li class="current_page_item"><a href="ServletProductos">Productos</a></li>
@@ -84,22 +80,13 @@
 								</ul></li>
 							<li><a href="login.html">Login</a></li>
 							<li><a href="register.html">Registrarse</a></li>
-
 						</ul>
-
 					</div>
 				</div>
-
-
-
 				<div class="single-product-area">
 					<div class="zigzag-bottom"></div>
 					<div class="container">
 						<div class="row">
-
-
-
-
 							<div class="col-md-8">
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
