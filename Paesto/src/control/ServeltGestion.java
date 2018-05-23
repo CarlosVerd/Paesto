@@ -81,6 +81,26 @@ public class ServeltGestion extends HttpServlet {
 			
 		}
 		
+		else if(operacion.equals("detalle")){
+			try {
+			Producto producto;
+			String nombre = request.getParameter("nombre");
+			producto=ser.buscarNombre(nombre);
+			
+			request.setAttribute("producto", producto);
+			RequestDispatcher view = request.getRequestDispatcher("fichaprod.jsp");
+			view.forward(request, response);
+			
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
 		
 
 	}
