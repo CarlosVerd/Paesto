@@ -13,7 +13,7 @@
             <h2>GESTION DE PRODUCTOS</h2>
              <div id="body">        
                 <h3>ALTA DE UN PAIS</h3>
-                <form action="ServletBuscador?operacion=alta" method="POST">
+                <form action="ServeltGestion?operacion=alta" method="POST">
                     <table border="1">
                         <thead>
                             <tr>

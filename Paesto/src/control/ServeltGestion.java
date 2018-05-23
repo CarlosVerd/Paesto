@@ -22,7 +22,6 @@ public class ServeltGestion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Iservices ser = new Service();
-	private ArrayList<Producto> productos;
 
 	public ServeltGestion() {
 	}
@@ -45,6 +44,7 @@ public class ServeltGestion extends HttpServlet {
 
 		String operacion = request.getParameter("operacion");
 		
+		
 		ArrayList<Producto> col = null;
 		col = ser.mostrarProductos();
 
@@ -59,9 +59,25 @@ public class ServeltGestion extends HttpServlet {
 				System.out.println(e.getMessage());
 				e.printStackTrace();
 			}
+			System.out.println("Entra listado");
 		}
 		
-		else if(operacion.equals("")){
+		else if(operacion.equals("alta")){
+			
+			String nombre = request.getParameter("nombre");
+			String descripcion = request.getParameter("descripcion");
+			String rutaImagen = request.getParameter("rutaImagen");
+			String categoria = request.getParameter("categoria");
+			Float precio = new Float(request.getParameter("precio"));
+			ser.altaProducto(nombre, descripcion, rutaImagen, categoria, precio);
+			
+			try {
+				response.sendRedirect("ServeltGestion?operacion=listado");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 			
 		}
 		
