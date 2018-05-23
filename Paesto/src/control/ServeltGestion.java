@@ -61,7 +61,7 @@ public class ServeltGestion extends HttpServlet {
 			}
 		}
 		
-		else if(){
+		else if(operacion.equals("")){
 			
 		}
 		
