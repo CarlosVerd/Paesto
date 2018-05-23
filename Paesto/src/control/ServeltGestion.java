@@ -101,6 +101,19 @@ public class ServeltGestion extends HttpServlet {
 			
 		}
 		
+		else if(operacion.equals("eliminar")){
+			
+			String nombre = request.getParameter("nombre");
+			ser.bajaProducto(nombre);
+			
+			try {
+				response.sendRedirect("ServeltGestion?operacion=listado");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 		
 
 	}
