@@ -28,8 +28,8 @@
 			<div id="menu">
 				<ul>
 					<li><a href="index.html">Inicio</a></li>
-					<li class="#"><a href="#">Productos</a></li>
-					<li><a href="current_page_item">Categorías</a></li>
+					<li class="#"><a href="ServletProductos">Productos</a></li>
+					<li class="current_page_item"><a href="#">Categorías</a></li>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
 					<li><a href="#">Carrito</a></li>
@@ -87,8 +87,8 @@
 										<Strong>Categorias</Strong>
 									</h2>
 									<ul>
-										<li><a href="#">Ron Blanco</a></li>
-										<li><a href="#">Ron Añejo</a></li>
+										<li><a href="ServletCategoria?cat=blanco">Ron Blanco</a></li>
+										<li><a href="ServletCategoria?cat=ejo">Ron Añejo</a></li>
 									</ul>
 								</li>
 								<li>
