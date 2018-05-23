@@ -51,6 +51,9 @@ public class Datos implements Idatos {
 	 * categoria,precio y los introduce en la base de datos en sus respectivas
 	 * columnas en la base de datos, no devuelve nada ya solo se dedica ha
 	 * introducir filas en la base
+	 * *</p>
+	 * <p>
+	 * @param String nombre, String descripcion, String rutaImagen, String categoria, Float precio
 	 * </p>
 	 */
 
