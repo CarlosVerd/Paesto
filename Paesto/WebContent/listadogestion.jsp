@@ -24,11 +24,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach var="pais" items="${paises}">
+                        <c:forEach var="producto" items="${colron}">
                             <tr>
-                                <td>${pais.nombre}</td>
-                                <td>${pais.continente}</td>
-                                <td>${pais.region}</td>
+                                <td>${producto.nombre}</td>
+                                <td>${producto.descripcion}</td>
+                                <td>${producto.rutaImagen}</td>
+                                <td>${producto.categoria}</td>
+                                <td>${producto.precio}</td>
                                 <td><a href="paises?operacion=detalle&cod=${pais.code}">Detalles</a></td>
                                 <td><a href="paises?operacion=modificacion&cod=${pais.code}">Modificar</a></td>
                                 <td><a href="paises?operacion=baja&cod=${pais.code}">Eliminar</a></td>
