@@ -48,6 +48,7 @@ public class ServletCategoria extends HttpServlet {
 		System.out.println(categoria);
 		request.setAttribute("categoria", categoria);
 		RequestDispatcher view = request.getRequestDispatcher("categorias.jsp");
+
 		try {
 			view.forward(request, response);
 		} catch (ServletException | IOException e) {
