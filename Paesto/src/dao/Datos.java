@@ -133,8 +133,6 @@ public class Datos implements Idatos {
 	public void bajaProducto(String nombre) {
 
 		String sql = "DELETE FROM productos WHERE nombre=" + "'" + nombre + "'";
-		
-		
 		conexionBaseDatos();
 		try {
 				

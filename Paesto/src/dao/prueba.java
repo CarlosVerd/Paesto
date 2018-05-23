@@ -12,7 +12,7 @@ public class prueba {
 		
 		Datos d = new Datos();
 		
-		d.bajaProducto("fer");
+		d.bajaProducto("orlando");
 		
 	}
 
