@@ -39,7 +39,7 @@
                     </tbody>
                 </table>
                 <p><a href="altagestion.jsp">Crear nuevo producto</a></p>
-
+				<p><a href="index.html">Volver</a></p>
                 <br/>
                 <br/>
                 <div id="listado"></div>
