@@ -118,6 +118,8 @@ public class ServeltGestion extends HttpServlet {
 				producto = ser.buscarNombre(nombre);
 
 				request.setAttribute("producto", producto);
+				System.out.println(producto);
+
 				RequestDispatcher view = request.getRequestDispatcher("modificar.jsp");
 				view.forward(request, response);
 
@@ -131,7 +133,6 @@ public class ServeltGestion extends HttpServlet {
 		}
 
 		else if (operacion.equals("actualizar")) {
-			// op.Update(recogerDatos(request));
 			Producto p = new Producto();
 
 			p.setNombre(request.getParameter("nombre"));
@@ -140,6 +141,7 @@ public class ServeltGestion extends HttpServlet {
 			p.setCategoria(request.getParameter("categoria"));
 			p.setPrecio(Float.parseFloat(request.getParameter("precio")));
 
+			System.out.println(p);
 			ser.modificarProducto(p);
 			try {
 				response.sendRedirect("ServletGestion?operacion=listado");

@@ -193,21 +193,24 @@ public class Datos implements Idatos {
 	}
 
 	public void modificarProducto(Producto p) {
+		System.out.println("sdfs");
 
 		try {
-			String sql = "UPDATE productos SET nombre ='" + p.getNombre() + "',descripcion ='" + p.getDescripcion()
+			String sql = "UPDATE `productos` SET nombre ='" + p.getNombre() + "',descripcion ='" + p.getDescripcion()
 					+ "',rutaimagen ='" + p.getRutaImagen() + "',categoria ='" + p.getCategoria() + "',precio ='"
-					+ p.getPrecio() + "' WHERE nombre='" + p.getNombre() + "'";
+					+ p.getPrecio() + "' WHERE nombre ='asdfsd'";
+//			"+ p.getNombre() + "'
+//			'asdfsd'
 			guardar = conection.prepareStatement(sql);
 
 			System.out.println(sql);
 			
-			guardar.setString(1, p.getNombre());
-			guardar.setString(2, p.getDescripcion());
-			guardar.setString(3, p.getRutaImagen());
-			guardar.setString(4, p.getCategoria());
-			guardar.setFloat(5, p.getPrecio());
-			System.out.println("--probando " + guardar);
+//			guardar.setString(1, p.getNombre());
+//			guardar.setString(2, p.getDescripcion());
+//			guardar.setString(3, p.getRutaImagen());
+//			guardar.setString(4, p.getCategoria());
+//			guardar.setFloat(5, p.getPrecio());
+//			System.out.println("--probando " + guardar);
 			guardar.executeUpdate();
 			
 			conection.close();

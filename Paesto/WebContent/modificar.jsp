@@ -12,7 +12,7 @@
 		<h2>Modificar Ronea Working</h2>
 		<div id="body">
 			<h3>MODIFICACIÓN DE LOS DATOS DE RON</h3>
-			<form action="ServletGestion?operacion=actualizar" method="POST">
+			<form action="ServeltGestion?operacion=actualizar" method="POST">
 				<table border="1">
 					<tr>
 						<th>Nombre</th>
@@ -26,7 +26,7 @@
 					</tr>
 					<tr>
 						<th>Imagen</th>
-						<td><input type="text" name="rutaimagen"
+						<td><input type="text" name="rutaImagen"
 							value="${producto.rutaImagen}" size="30" /></td>
 					</tr>
 					<tr>
