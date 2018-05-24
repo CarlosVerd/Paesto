@@ -118,33 +118,30 @@ img.aligncenter {
 
 /* Search */
 #search {
-	height: 110px;
-	padding: 0;
+	height: 110px !important;
+	padding: 0 !important;
 }
 
-#search form {
-	height: 50px;
-	padding-left: 20px;
-}
+
 
 #search fieldset {
-	margin: 0;
-	padding: 0;
-	border: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
 }
 
 #search-text {
-	width: 150px;
-	padding: 6px 10px;
-	border: none;
-	background: #FFFFFF;
-	text-transform: lowercase;
-	font: normal 11px Arial, Helvetica, sans-serif;
-	color: #7F7F81;
+	width: 150px !important;
+	padding: 6px 10px !important;
+	border: none !important;
+	background: #FFFFFF !important;
+	text-transform: lowercase !important;
+	font: normal 11px Arial, Helvetica, sans-serif !important;
+	color: #7F7F81 !important;
 }
 
 #search-submit {
-	display: none;
+	display: none !important;
 }
 
 /* Menu */
@@ -248,25 +245,25 @@ img.aligncenter {
 
 /* Sidebar */
 #sidebar {
-	float: right;
-	width: 210px;
-	font-size: 12px;
+	float: right !important;
+	width: 210px !important;
+	font-size: 12px !important;
 }
 
 #sidebar ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
 }
 
 #sidebar li {
-	margin: 0;
-	padding: 0;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 #sidebar li ul {
-	margin: 0px 20px;
-	padding-bottom: 30px;
+	margin: 0px 20px !important;
+	padding-bottom: 30px !important;
 }
 
 #sidebar li li {
@@ -275,37 +272,37 @@ img.aligncenter {
 }
 
 #sidebar li li span {
-	display: block;
-	margin-top: -20px;
-	padding: 0;
-	font-size: 11px;
-	font-style: italic;
+	display: block !important;
+	margin-top: -20px !important;
+	padding: 0 !important;
+	font-size: 11px !important;
+	font-style: italic !important;
 }
 
 #sidebar h2 {
-	height: 29px;
-	margin-bottom: 20px;
-	padding: 11px 0px 0px 30px;
-	background: url(images/img02.gif) no-repeat left top;
-	font-size: 14px;
-	font-weight: normal;
-	color: #000000;
+	height: 29px !important;
+	margin-bottom: 20px !important;
+	padding: 11px 0px 0px 30px !important;
+	background: url(images/img02.gif) no-repeat left top !important;
+	font-size: 14px !important;
+	font-weight: normal !important;
+	color: #000000 !important;
 }
 
 #sidebar p {
-	margin: 0 0px;
-	padding: 0px 20px 20px 20px;
-	text-align: justify;
-	color: #FFFFFF;
+	margin: 0 0px !important;
+	padding: 0px 20px 20px 20px !important;
+	text-align: justify !important;
+	color: #FFFFFF !important;
 }
 
 #sidebar a {
-	border: none;
-	color: #FFFFFF;
+	border: none !important;
+	color: #FFFFFF !important;
 }
 
 #sidebar a:hover {
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 /* Calendar */
