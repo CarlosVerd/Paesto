@@ -41,6 +41,11 @@ public class Service implements Iservices{
 		col=dat.mostrarCategorias(tipo);
 		return col;
 	}
+	
+	public void modificarProducto(Producto p) {
+		dat.modificarProducto(p);
+		
+	}
 
 
 }

@@ -50,11 +50,14 @@ public class Datos implements Idatos {
 	 * Este método recibe los parametros de nombre, descripcion, rutaimagen,
 	 * categoria,precio y los introduce en la base de datos en sus respectivas
 	 * columnas en la base de datos, no devuelve nada ya solo se dedica ha
-	 * introducir filas en la base
-	 * *</p>
-	 * <p>
-	 * @param String nombre, String descripcion, String rutaImagen, String categoria, Float precio
+	 * introducir filas en la base *
 	 * </p>
+	 * <p>
+	 * 
+	 * @param String
+	 *            nombre, String descripcion, String rutaImagen, String
+	 *            categoria, Float precio
+	 *            </p>
 	 */
 
 	@Override
@@ -85,20 +88,17 @@ public class Datos implements Idatos {
 	}
 
 	/**
-	 * @author orlando
+	 * <p>
+	 * Metodo el cual recibe un nombre y realiza una consulta buscando en la
+	 * base de datos y si encuentra un nombre que correspondiente con el dado,
+	 * guarda todos los atributos encontrados en un objeto de tipo Producto
+	 * </p>
 	 * 
-	 *         <p>
-	 *         Metodo el cual recibe un nombre y realiza una consulta buscando
-	 *         en la base de datos y si encuentra un nombre que correspondiente
-	 *         con el dado, guarda todos los atributos encontrados en un objeto
-	 *         de tipo Producto
-	 *         </p>
-	 * 
-	 * @param Ingresa un String
-	 * 
+	 * @param Ingresa
+	 *            un String
 	 * @return retorna uno objeto de productos
 	 */
-	
+
 	@Override
 	public Producto buscarNombre(String nombre) {
 
@@ -134,27 +134,24 @@ public class Datos implements Idatos {
 		String sql = "DELETE FROM productos WHERE nombre=" + "'" + nombre + "'";
 		conexionBaseDatos();
 		try {
-				
-				PreparedStatement sentencia = conection.prepareStatement(sql);
+
+			PreparedStatement sentencia = conection.prepareStatement(sql);
 
 			sentencia.executeUpdate();
-			
-		}catch (SQLException e) {
+
+		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
 	}
 
 	/**
-	 * @author orlando
-	 * 
-	 *         <p>
-	 *         Metodo el cual realiza una consulta a la base de datos
-	 *         </p>
+	 * <p>
+	 * Metodo el cual realiza una consulta a la base de datos
+	 * </p>
 	 * 
 	 * @return retorna un ArrayList de productos
-	 * 
 	 */
-	
+
 	@Override
 	public ArrayList<Producto> mostrarProductos() {
 
@@ -180,19 +177,47 @@ public class Datos implements Idatos {
 
 		return a;
 	}
-	
-	public ArrayList<Producto> mostrarCategorias(String tipo){
 
-		ArrayList<Producto> productos=mostrarProductos();
-		ArrayList<Producto> categoria=new ArrayList<>();
-		
-		for(int i=0;i<productos.size();i++){
-			if(productos.get(i).getCategoria().contains(tipo)){
-				categoria.add(productos.get(i));	
+	public ArrayList<Producto> mostrarCategorias(String tipo) {
+
+		ArrayList<Producto> productos = mostrarProductos();
+		ArrayList<Producto> categoria = new ArrayList<>();
+
+		for (int i = 0; i < productos.size(); i++) {
+			if (productos.get(i).getCategoria().contains(tipo)) {
+				categoria.add(productos.get(i));
 			}
 		}
-			
+
 		return categoria;
 	}
-	
+
+	public void modificarProducto(Producto p) {
+
+		try {
+			String sql = "UPDATE productos SET nombre ='" + p.getNombre() + "',descripcion ='" + p.getDescripcion()
+					+ "',rutaimagen ='" + p.getRutaImagen() + "',categoria ='" + p.getCategoria() + "',precio ='"
+					+ p.getPrecio() + "' WHERE nombre='" + p.getNombre() + "'";
+			guardar = conection.prepareStatement(sql);
+
+			System.out.println(sql);
+			
+			guardar.setString(1, p.getNombre());
+			guardar.setString(2, p.getDescripcion());
+			guardar.setString(3, p.getRutaImagen());
+			guardar.setString(4, p.getCategoria());
+			guardar.setFloat(5, p.getPrecio());
+			System.out.println("--probando " + guardar);
+			guardar.executeUpdate();
+			
+			conection.close();
+
+		}  catch (SQLException e) {
+			System.out.println("Excepcion SQL: " + e.getMessage());
+			System.out.println("Estado SQL: " + e.getSQLState());
+			System.out.println("Codigo de error: " + e.getErrorCode());
+			e.printStackTrace();
+		}
+	}
+
 }

@@ -43,13 +43,11 @@ public class ServeltGestion extends HttpServlet {
 	protected void continuar(HttpServletRequest request, HttpServletResponse response) {
 
 		String operacion = request.getParameter("operacion");
-		
-		
+
 		ArrayList<Producto> col = null;
 		col = ser.mostrarProductos();
 
 		if (operacion.equals("listado")) {
-			
 
 			request.setAttribute("colron", col);
 			RequestDispatcher view = request.getRequestDispatcher("listadogestion.jsp");
@@ -61,36 +59,35 @@ public class ServeltGestion extends HttpServlet {
 			}
 			System.out.println("Entra listado");
 		}
-		
-		else if(operacion.equals("alta")){
-			
+
+		else if (operacion.equals("alta")) {
+
 			String nombre = request.getParameter("nombre");
 			String descripcion = request.getParameter("descripcion");
 			String rutaImagen = request.getParameter("rutaImagen");
 			String categoria = request.getParameter("categoria");
 			Float precio = new Float(request.getParameter("precio"));
 			ser.altaProducto(nombre, descripcion, rutaImagen, categoria, precio);
-			
+
 			try {
 				response.sendRedirect("ServeltGestion?operacion=listado");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
+
 		}
-		
-		else if(operacion.equals("detalle")){
+
+		else if (operacion.equals("detalle")) {
 			try {
-			Producto producto;
-			String nombre = request.getParameter("nombre");
-			producto=ser.buscarNombre(nombre);
-			
-			request.setAttribute("producto", producto);
-			RequestDispatcher view = request.getRequestDispatcher("fichaprod.jsp");
-			view.forward(request, response);
-			
+				Producto producto;
+				String nombre = request.getParameter("nombre");
+				producto = ser.buscarNombre(nombre);
+
+				request.setAttribute("producto", producto);
+				RequestDispatcher view = request.getRequestDispatcher("fichaprod.jsp");
+				view.forward(request, response);
+
 			} catch (ServletException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -98,14 +95,14 @@ public class ServeltGestion extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		}
-		
-		else if(operacion.equals("eliminar")){
-			
+
+		else if (operacion.equals("eliminar")) {
+
 			String nombre = request.getParameter("nombre");
 			ser.bajaProducto(nombre);
-			
+
 			try {
 				response.sendRedirect("ServeltGestion?operacion=listado");
 			} catch (IOException e) {
@@ -113,9 +110,43 @@ public class ServeltGestion extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-		
-		
 
+		else if (operacion.equals("modificar")) {
+			try {
+				Producto producto;
+				String nombre = request.getParameter("nombre");
+				producto = ser.buscarNombre(nombre);
+
+				request.setAttribute("producto", producto);
+				RequestDispatcher view = request.getRequestDispatcher("modificar.jsp");
+				view.forward(request, response);
+
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		else if (operacion.equals("actualizar")) {
+			// op.Update(recogerDatos(request));
+			Producto p = new Producto();
+
+			p.setNombre(request.getParameter("nombre"));
+			p.setDescripcion(request.getParameter("descripcion"));
+			p.setRutaImagen(request.getParameter("rutaImagen"));
+			p.setCategoria(request.getParameter("categoria"));
+			p.setPrecio(Float.parseFloat(request.getParameter("precio")));
+
+			ser.modificarProducto(p);
+			try {
+				response.sendRedirect("ServletGestion?operacion=listado");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
-
 }

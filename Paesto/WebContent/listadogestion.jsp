@@ -32,7 +32,7 @@
                                 <td>${producto.categoria}</td>
                                 <td>${producto.precio}</td>
                                 <td><a href="ServeltGestion?operacion=detalle&nombre=${producto.nombre}">Detalles</a></td>
-                                <td><a href="ServeltGestion?operacion=modificacion&nombre=${producto.nombre}">Modificar</a></td>
+                                <td><a href="ServeltGestion?operacion=modificar&nombre=${producto.nombre}">Modificar</a></td>
                                 <td><a href="ServeltGestion?operacion=eliminar&nombre=${producto.nombre}">Eliminar</a></td>
                             </tr>
                         </c:forEach>
