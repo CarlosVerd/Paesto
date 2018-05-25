@@ -56,6 +56,7 @@
 						data-hover="dropdown" class="dropdown-toggle" href="#"><span
 							class="key">Categorías </span><span class="value"></span><b
 							class="caret"></b></a>
+					<li><a href="ServeltGestion?operacion=listado">Gestión</a></li>
 						<ul class="dropdown-menu">
 							<li><a href="ServletCategoria?cat=blanco">Ron Blanco</a></li>
 							<li><a href="ServletCategoria?cat=ejo">Ron Añejo</a></li>
