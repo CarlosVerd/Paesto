@@ -42,8 +42,8 @@ public class ServletBuscador extends HttpServlet {
 	protected void continuar(HttpServletRequest request, HttpServletResponse response)  {
 		Producto producto = null;
 		
-		String buscadorHome=request.getParameter("homeBuscador");
-		
+		String buscadorHome=request.getParameter("homeBuscador");	
+		if(buscadorHome.equals("Flor de caÃ±a")) buscadorHome="Flor de caña";
 		producto=ser.buscarNombre(buscadorHome);
 		
 		if(producto.getNombre() == null || buscadorHome == ""){
