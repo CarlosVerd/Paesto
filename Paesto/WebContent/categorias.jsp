@@ -10,7 +10,7 @@
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Ronea Working</title>
-<link href="styleindex.css" rel="stylesheet" type="text/css"
+<link href="css/styleindex.css" rel="stylesheet" type="text/css"
 	media="screen" />
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 

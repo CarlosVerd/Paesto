@@ -860,7 +860,7 @@ ol.slide-indicators li.active {
 }
 
 .product-big-title-area {
-	background: url(img/crossword.png) repeat scroll 0 0 #5a88ca
+	background: url(../img/crossword.png) repeat scroll 0 0 #5a88ca    /*cambiar*/
 }
 
 .product-bit-title h2 {
@@ -1481,7 +1481,7 @@ img.aligncenter {
 #wrapper {
 	width: 960px;
 	margin: 0px auto;
-	background: url(images/img01.jpg) no-repeat center top;
+	background: url(../images/img01.jpg) no-repeat center top;     /*cambiar*/
 }
 
 #wrapper-bgbtm {
@@ -1688,7 +1688,7 @@ img.aligncenter {
 
 #sidebar li li {
 	line-height: 35px;
-	background: url(images/img07.jpg) repeat-x left bottom;
+	background: url(../images/img07.jpg) repeat-x left bottom;     /*cambiar*/
 }
 
 #sidebar li li span {
@@ -1703,7 +1703,7 @@ img.aligncenter {
 	height: 29px;
 	margin-bottom: 20px;
 	padding: 11px 0px 0px 30px;
-	background: url(images/img02.gif) no-repeat left top;
+	background: url(../images/img02.gif) no-repeat left top;    /*cambiar*/
 	font-size: 14px;
 	font-weight: normal;
 	color: #000000;
