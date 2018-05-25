@@ -46,18 +46,16 @@ public class Datos implements Idatos {
 	}
 
 	/**
-	 * <p>
+	 * 
 	 * Este método recibe los parametros de nombre, descripcion, rutaimagen,
 	 * categoria,precio y los introduce en la base de datos en sus respectivas
 	 * columnas en la base de datos, no devuelve nada ya solo se dedica ha
 	 * introducir filas en la base *
-	 * </p>
-	 * <p>
 	 * 
-	 * @param String
-	 *            nombre, String descripcion, String rutaImagen, String
-	 *            categoria, Float precio
-	 *            </p>
+	 * 
+	 * 
+	 * @param Producto p
+	 *            
 	 */
 
 	@Override
@@ -177,6 +175,11 @@ public class Datos implements Idatos {
 
 		return a;
 	}
+	
+	/**
+	 * Este metodo recoge todos los productos de la base de datos mediante un ArrayList, y a traves del parametro que le damos crea un nuevo ArrayList
+	 * para almacenar los productos de una determinada categoria, devuelve el nuevo ArrayList de categoría
+	 */
 
 	@Override
 	public ArrayList<Producto> mostrarCategorias(String tipo) {
@@ -192,10 +195,15 @@ public class Datos implements Idatos {
 
 		return categoria;
 	}
+	
+	/**
+	 * Este metodo actualiza un producto de la base de datos a traves de su nombre, se le pasa un producto y de ahí saca su nombre,
+	 * no se puede modificar el nombre
+	 */
 
 	@Override
 	public void modificarProducto(Producto p) {
-		System.out.println("sdfs");
+		
 
 		try {
 			String sql = "UPDATE `productos` SET descripcion ='" + p.getDescripcion()
@@ -203,15 +211,6 @@ public class Datos implements Idatos {
 					+ p.getPrecio() + "' WHERE nombre ='"+ p.getNombre() + "'";
 
 			guardar = conection.prepareStatement(sql);
-
-			System.out.println(sql);
-			
-//			guardar.setString(1, p.getNombre());
-//			guardar.setString(2, p.getDescripcion());
-//			guardar.setString(3, p.getRutaImagen());
-//			guardar.setString(4, p.getCategoria());
-//			guardar.setFloat(5, p.getPrecio());
-//			System.out.println("--probando " + guardar);
 			guardar.executeUpdate();
 			
 			conection.close();
