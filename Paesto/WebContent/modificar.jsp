@@ -16,8 +16,7 @@
 				<table border="1">
 					<tr>
 						<th>Nombre</th>
-						<td><input type="text" name="nombre"
-							value="${producto.nombre}" size="30" /></td>
+						<td><strong>${producto.nombre}</strong></td>
 					</tr>
 					<tr>
 						<th>Descripción</th>
