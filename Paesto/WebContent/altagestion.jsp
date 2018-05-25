@@ -5,16 +5,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link href="css/estilos.css" rel="stylesheet" type="text/css" /> 
+        <link href="css/otro.css" rel="stylesheet" type="text/css"  /> 
+        <link href="images/img01.jpg" />
         <title>Gestión productos</title>
     </head>
     <body>
-        <div id="contenedor">
+        <div class="contenedor">
             <h2>GESTION DE PRODUCTOS</h2>
              <div id="body">        
                 <h3>ALTA DE UN RON</h3>
                 <form action="ServeltGestion?operacion=alta" method="POST">
-                    <table border="1">
+                    <table border="1" class="tabla">
                         <thead>
                             <tr>
                                 <td>Nombre</td>
