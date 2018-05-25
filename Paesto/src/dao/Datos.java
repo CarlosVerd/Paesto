@@ -54,7 +54,7 @@ public class Datos implements Idatos {
 	 * 
 	 * 
 	 * 
-	 * @param Producto p
+	 * 
 	 *            
 	 */
 
@@ -92,8 +92,7 @@ public class Datos implements Idatos {
 	 * guarda todos los atributos encontrados en un objeto de tipo Producto
 	 * </p>
 	 * 
-	 * @param Ingresa
-	 *            un String
+	 * 
 	 * @return retorna uno objeto de productos
 	 */
 
