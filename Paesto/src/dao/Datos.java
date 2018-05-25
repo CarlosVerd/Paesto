@@ -198,11 +198,10 @@ public class Datos implements Idatos {
 		System.out.println("sdfs");
 
 		try {
-			String sql = "UPDATE `productos` SET nombre ='" + p.getNombre() + "',descripcion ='" + p.getDescripcion()
+			String sql = "UPDATE `productos` SET descripcion ='" + p.getDescripcion()
 					+ "',rutaimagen ='" + p.getRutaImagen() + "',categoria ='" + p.getCategoria() + "',precio ='"
-					+ p.getPrecio() + "' WHERE nombre ='asdf'";
-//			"+ p.getNombre() + "'
-//			'asdfsd'
+					+ p.getPrecio() + "' WHERE nombre ='"+ p.getNombre() + "'";
+
 			guardar = conection.prepareStatement(sql);
 
 			System.out.println(sql);
