@@ -122,6 +122,7 @@ public class ServeltGestion extends HttpServlet {
 
 				RequestDispatcher view = request.getRequestDispatcher("modificar.jsp");
 				view.forward(request, response);
+				System.out.println("Entra modificar");
 
 			} catch (ServletException e) {
 				// TODO Auto-generated catch block
@@ -141,10 +142,10 @@ public class ServeltGestion extends HttpServlet {
 			p.setCategoria(request.getParameter("categoria"));
 			p.setPrecio(Float.parseFloat(request.getParameter("precio")));
 
-			System.out.println(p);
+			System.out.println("actualizar"+p);
 			ser.modificarProducto(p);
 			try {
-				response.sendRedirect("ServletGestion?operacion=listado");
+				response.sendRedirect("ServeltGestion?operacion=listado");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -178,6 +178,7 @@ public class Datos implements Idatos {
 		return a;
 	}
 
+	@Override
 	public ArrayList<Producto> mostrarCategorias(String tipo) {
 
 		ArrayList<Producto> productos = mostrarProductos();
@@ -192,13 +193,14 @@ public class Datos implements Idatos {
 		return categoria;
 	}
 
+	@Override
 	public void modificarProducto(Producto p) {
 		System.out.println("sdfs");
 
 		try {
 			String sql = "UPDATE `productos` SET nombre ='" + p.getNombre() + "',descripcion ='" + p.getDescripcion()
 					+ "',rutaimagen ='" + p.getRutaImagen() + "',categoria ='" + p.getCategoria() + "',precio ='"
-					+ p.getPrecio() + "' WHERE nombre ='asdfsd'";
+					+ p.getPrecio() + "' WHERE nombre ='asdf'";
 //			"+ p.getNombre() + "'
 //			'asdfsd'
 			guardar = conection.prepareStatement(sql);
