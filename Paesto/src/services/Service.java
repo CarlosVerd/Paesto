@@ -18,8 +18,8 @@ public class Service implements Iservices{
 	}
 
 	@Override
-	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio) {
-		dat.altaProducto(nombre, descripcion, rutaImagen, categoria, precio);
+	public void altaProducto(Producto p) {
+		dat.altaProducto(p);
 		
 	}
 

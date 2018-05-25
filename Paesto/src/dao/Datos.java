@@ -61,18 +61,18 @@ public class Datos implements Idatos {
 	 */
 
 	@Override
-	public void altaProducto(String nombre, String descripcion, String rutaImagen, String categoria, Float precio) {
+	public void altaProducto(Producto p) {
 		String insertTableSQL = "INSERT INTO ventaron.productos"
 				+ "(nombre, descripcion, rutaimagen, categoria,precio) VALUES" + "(?,?,?,?,?)";
 
 		try {
 			guardar = conection.prepareStatement(insertTableSQL);
 
-			guardar.setString(1, nombre);
-			guardar.setString(2, descripcion);
-			guardar.setString(3, rutaImagen);
-			guardar.setString(4, categoria);
-			guardar.setFloat(5, precio);
+			guardar.setString(1, p.getNombre());
+			guardar.setString(2, p.getDescripcion());
+			guardar.setString(3, p.getRutaImagen());
+			guardar.setString(4, p.getCategoria());
+			guardar.setFloat(5, p.getPrecio());
 			System.out.println("--probando " + guardar);
 			guardar.executeUpdate();
 

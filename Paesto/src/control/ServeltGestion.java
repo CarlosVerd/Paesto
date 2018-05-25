@@ -61,13 +61,14 @@ public class ServeltGestion extends HttpServlet {
 		}
 
 		else if (operacion.equals("alta")) {
-
-			String nombre = request.getParameter("nombre");
-			String descripcion = request.getParameter("descripcion");
-			String rutaImagen = request.getParameter("rutaImagen");
-			String categoria = request.getParameter("categoria");
-			Float precio = new Float(request.getParameter("precio"));
-			ser.altaProducto(nombre, descripcion, rutaImagen, categoria, precio);
+			Producto p = new Producto();
+			p.setNombre(request.getParameter("nombre"));
+			p.setDescripcion(request.getParameter("descripcion"));
+			p.setRutaImagen(request.getParameter("rutaImagen"));
+			p.setCategoria(request.getParameter("categoria"));
+			p.setPrecio(Float.parseFloat(request.getParameter("precio")));
+			
+			ser.altaProducto(p);
 
 			try {
 				response.sendRedirect("ServeltGestion?operacion=listado");
