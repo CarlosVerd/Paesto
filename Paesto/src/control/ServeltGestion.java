@@ -39,6 +39,12 @@ public class ServeltGestion extends HttpServlet {
 		doGet(request, response);
 
 	}
+	
+	/**
+	 * Este método maneja toda la gestión de los productos, depediendo de que página lo llame realizará unas funciones u otras controladas por sentencias if 
+	 * @param request 
+	 * @param response
+	 */
 
 	protected void continuar(HttpServletRequest request, HttpServletResponse response) {
 
@@ -57,10 +63,10 @@ public class ServeltGestion extends HttpServlet {
 				System.out.println(e.getMessage());
 				e.printStackTrace();
 			}
-			System.out.println("Entra listado");
 		}
 
 		else if (operacion.equals("alta")) {
+			try {
 			Producto p = new Producto();
 			p.setNombre(request.getParameter("nombre"));
 			p.setDescripcion(request.getParameter("descripcion"));
@@ -70,11 +76,22 @@ public class ServeltGestion extends HttpServlet {
 			
 			ser.altaProducto(p);
 
-			try {
+			
 				response.sendRedirect("ServeltGestion?operacion=listado");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}
+			catch (NumberFormatException e) {
+				
+				System.out.println("Has metido "+e.getMessage()+", mete un número real,al dar de alta un producto");
+				try {
+					response.sendRedirect("ServeltGestion?operacion=listado");
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 			}
 
 		}
@@ -135,6 +152,7 @@ public class ServeltGestion extends HttpServlet {
 		}
 
 		else if (operacion.equals("actualizar")) {
+			try {
 			Producto p = new Producto();
 
 			p.setNombre(request.getParameter("nombre"));
@@ -145,11 +163,21 @@ public class ServeltGestion extends HttpServlet {
 
 			System.out.println("actualizar"+p);
 			ser.modificarProducto(p);
-			try {
+			
 				response.sendRedirect("ServeltGestion?operacion=listado");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}
+			catch (NumberFormatException e) {
+				//e.printStackTrace();
+				System.out.println("Has metido "+e.getMessage()+", mete un número real, al modificar un producto");
+				try {
+					response.sendRedirect("ServeltGestion?operacion=listado");
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		}
 	}
