@@ -47,7 +47,7 @@ public class ServletBuscador extends HttpServlet {
 		
 		if(producto.getNombre() == null || buscadorHome == ""){
 			
-			RequestDispatcher view = request.getRequestDispatcher("index.html");
+			RequestDispatcher view = request.getRequestDispatcher("noEncontrado.html");
 			try {
 				view.forward(request, response);
 			} catch (ServletException | IOException e) {
