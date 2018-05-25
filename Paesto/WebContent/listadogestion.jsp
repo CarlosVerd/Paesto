@@ -10,7 +10,7 @@
         <title>Gestión productos</title>
     </head>
     <body>
-        <div id="contenedor">
+        <div class="contenedor">
             <h2>GESTION DE PRODUCTOS</h2>
             <div id="body">        
                 <h3>LISTADO DE PRODUCTOS</h3>
@@ -39,8 +39,8 @@
                         </c:forEach>
                     </tbody>
                 </table>
-                <p><a href="altagestion.jsp">Crear nuevo producto</a></p>
-				<p><a href="index.html">Volver</a></p>
+                <p id="esto"><a href="altagestion.jsp">Crear nuevo producto</a></p>
+				<p id="esto"><a href="index.html">Volver</a></p>
                 <br/>
                 <br/>
             </div>
