@@ -29,9 +29,9 @@
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="styleficha.css">
+<link rel="stylesheet" href="css/styleficha.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link href="styleindex.css" rel="stylesheet" type="text/css"
+<link href="css/styleindex.css" rel="stylesheet" type="text/css"
 	media="screen" />
 
 <!--[if lt IE 9]>

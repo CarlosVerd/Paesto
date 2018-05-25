@@ -64,7 +64,7 @@ img.aligncenter {
 #wrapper {
 	width: 1150px;
 	margin: 0px auto;
-	background: url(images/img01.jpg) no-repeat center top;
+	background: url(../images/img01.jpg) no-repeat center top;
 }
 
 #wrapper-bgbtm {
@@ -268,7 +268,7 @@ img.aligncenter {
 
 #sidebar li li {
 	line-height: 35px;
-	background: url(images/img07.jpg) repeat-x left bottom;
+	background: url(../images/img07.jpg) repeat-x left bottom;
 }
 
 #sidebar li li span {
@@ -283,7 +283,7 @@ img.aligncenter {
 	height: 29px !important;
 	margin-bottom: 20px !important;
 	padding: 11px 0px 0px 30px !important;
-	background: url(images/img02.gif) no-repeat left top !important;
+	background: url(../images/img02.gif) no-repeat left top !important;
 	font-size: 14px !important;
 	font-weight: normal !important;
 	color: #000000 !important;
