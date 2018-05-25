@@ -5,7 +5,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link href="css/estilos.css" rel="stylesheet" type="text/css" /> 
+        <link href="css/otro.css" rel="stylesheet" type="text/css"  /> 
+        <link href="images/img01.jpg" />
         <title>Gestión productos</title>
     </head>
     <body>
@@ -13,7 +14,7 @@
             <h2>GESTION DE PRODUCTOS</h2>
             <div id="body">        
                 <h3>LISTADO DE PRODUCTOS</h3>
-                <table border="1">
+                <table border="1" class="tabla">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -42,7 +43,6 @@
 				<p><a href="index.html">Volver</a></p>
                 <br/>
                 <br/>
-                <div id="listado"></div>
             </div>
         </div>
     </body>
