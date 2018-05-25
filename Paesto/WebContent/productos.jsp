@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="java.util.*"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -10,6 +9,27 @@
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Ronea Working</title>
+<link href="css/styleindex.css" rel="stylesheet" type="text/css"
+	media="screen" />
+<link
+	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100'
+	rel='stylesheet' type='text/css'>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+<!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
+<!-- <link rel="stylesheet" href="css/styleficha.css"> -->
+<!-- <link rel="stylesheet" href="css/responsive.css"> -->
 <link href="css/styleindex.css" rel="stylesheet" type="text/css"
 	media="screen" />
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -35,13 +55,13 @@
 						data-hover="dropdown" class="dropdown-toggle" href="#"><span
 							class="key">Categorías </span><span class="value"></span><b
 							class="caret"></b></a>
+					<li><a href="ServeltGestion?operacion=listado">Gestión</a></li>
 						<ul class="dropdown-menu">
 							<li><a href="ServletCategoria?cat=blanco">Ron Blanco</a></li>
 							<li><a href="ServletCategoria?cat=ejo">Ron Añejo</a></li>
 						</ul></li>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
-					<li><a href="#">Carrito</a></li>
 				</ul>
 			</div>
 			<!-- end #menu -->
@@ -61,7 +81,7 @@
 												alt="" class="alignleft border" />
 										<p>${producto.descripcion}</p>
 										<form method="post" action="ServletBuscador">
-											<input type="submit" value='Ficha detallada' /> <input
+											<input type="submit" style="color: black" value='Ficha detallada' /> <input
 												type="hidden" name="homeBuscador" id="homeBuscador"
 												value="${producto.nombre}" />
 										</form>
@@ -69,11 +89,6 @@
 								</div>
 							</c:forEach>
 						</div>
-
-
-
-
-
 
 						<!-- end #content -->
 						<div id="sidebar">
@@ -84,7 +99,7 @@
 								<form method="get" action="ServletBuscador">
 									<fieldset>
 										<input type="text" name="homeBuscador" id="homeBuscador"
-											size="20" placeholder="introduce marca a buscar..." /> <input
+											size="25" style="color: black" placeholder="introduce marca a buscar..." /> <input
 											type="submit" id="search-submit" value="GO" />
 									</fieldset>
 								</form>
@@ -115,9 +130,11 @@
 										<Strong>Top ventas</Strong>
 									</h2>
 									<ul>
-										<li><a href="#">Aliquam libero</a></li>
-										<li><a href="#">Consectetuer adipiscing elit</a></li>
-										<li><a href="#">Metus aliquam pellentesque</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Matusalem">Matusalem</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Flor de caña">Flor
+												de caña</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Brugal">Brugal</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Barcelo">Barcelo</a></li>
 									</ul>
 								</li>
 								<li>
@@ -125,9 +142,9 @@
 										<Strong>Recomendados</Strong>
 									</h2>
 									<ul>
-										<li><a href="#">Aliquam libero</a></li>
-										<li><a href="#">Consectetuer adipiscing elit</a></li>
-										<li><a href="#">Metus aliquam pellentesque</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Arehucas">Arehucas</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Centenario">Centenario</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Carupano">Carupano</a></li>
 									</ul>
 								</li>
 							</ul>

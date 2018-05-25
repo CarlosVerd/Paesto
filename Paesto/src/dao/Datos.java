@@ -71,7 +71,6 @@ public class Datos implements Idatos {
 			guardar.setString(3, p.getRutaImagen());
 			guardar.setString(4, p.getCategoria());
 			guardar.setFloat(5, p.getPrecio());
-			System.out.println("--probando " + guardar);
 			guardar.executeUpdate();
 
 			conection.close();
@@ -98,7 +97,7 @@ public class Datos implements Idatos {
 
 	@Override
 	public Producto buscarNombre(String nombre) {
-
+		System.out.println(nombre);
 		String sql = "SELECT * FROM productos WHERE nombre=" + "'" + nombre + "'";
 
 		Producto a = new Producto();

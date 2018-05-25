@@ -43,11 +43,12 @@ public class ServletBuscador extends HttpServlet {
 		Producto producto = null;
 		
 		String buscadorHome=request.getParameter("homeBuscador");
+		
 		producto=ser.buscarNombre(buscadorHome);
 		
 		if(producto.getNombre() == null || buscadorHome == ""){
 			
-			RequestDispatcher view = request.getRequestDispatcher("index.html");
+			RequestDispatcher view = request.getRequestDispatcher("noEncontrado.html");
 			try {
 				view.forward(request, response);
 			} catch (ServletException | IOException e) {

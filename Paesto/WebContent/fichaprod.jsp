@@ -61,9 +61,6 @@
 					</div>
 				</div>
 
-
-
-
 				<!-- End mainmenu area -->
 				<div>
 					<div id="menu">
