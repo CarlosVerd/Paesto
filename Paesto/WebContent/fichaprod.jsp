@@ -90,7 +90,7 @@
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
 										<a href="index.html">Inicio</a> > <a href="ServletCategoria?cat=${producto.categoria}">${producto.categoria}</a>
-										> <a href="">${producto.nombre}</a>
+										> <a href="ServletBuscador?homeBuscador=${producto.nombre}">${producto.nombre}</a>
 									</div>
 
 									<div class="row">
