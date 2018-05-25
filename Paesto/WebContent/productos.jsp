@@ -130,9 +130,11 @@
 										<Strong>Top ventas</Strong>
 									</h2>
 									<ul>
-										<li><a href="#">Aliquam libero</a></li>
-										<li><a href="#">Consectetuer adipiscing elit</a></li>
-										<li><a href="#">Metus aliquam pellentesque</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Matusalem">Matusalem</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Flor de caña">Flor
+												de caña</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Brugal">Brugal</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Barcelo">Barcelo</a></li>
 									</ul>
 								</li>
 								<li>
@@ -140,9 +142,9 @@
 										<Strong>Recomendados</Strong>
 									</h2>
 									<ul>
-										<li><a href="#">Aliquam libero</a></li>
-										<li><a href="#">Consectetuer adipiscing elit</a></li>
-										<li><a href="#">Metus aliquam pellentesque</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Arehucas">Arehucas</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Centenario">Centenario</a></li>
+										<li><a href="ServletBuscador?homeBuscador=Carupano">Carupano</a></li>
 									</ul>
 								</li>
 							</ul>
