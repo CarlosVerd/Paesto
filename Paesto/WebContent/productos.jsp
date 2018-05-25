@@ -29,8 +29,8 @@
 
 <!-- Custom CSS -->
 <!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
-<link rel="stylesheet" href="css/styleficha.css">
-<link rel="stylesheet" href="css/responsive.css">
+<!-- <link rel="stylesheet" href="css/styleficha.css"> -->
+<!-- <link rel="stylesheet" href="css/responsive.css"> -->
 <link href="css/styleindex.css" rel="stylesheet" type="text/css"
 	media="screen" />
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -81,8 +81,7 @@
 												alt="" class="alignleft border" />
 										<p>${producto.descripcion}</p>
 										<form method="post" action="ServletBuscador">
-											<input type="submit" style="" 
-											value='Ficha detallada' /> <input
+											<input type="submit" style="color: black" value='Ficha detallada' /> <input
 												type="hidden" name="homeBuscador" id="homeBuscador"
 												value="${producto.nombre}" />
 										</form>
@@ -99,9 +98,8 @@
 								</h2>
 								<form method="get" action="ServletBuscador">
 									<fieldset>
-										<input style="color: black; width: 180px; height: 15px"
-											type="text" name="homeBuscador" id="homeBuscador"
-											placeholder="introduce marca a buscar..." /> <input
+										<input type="text" name="homeBuscador" id="homeBuscador"
+											size="25" style="color: black" placeholder="introduce marca a buscar..." /> <input
 											type="submit" id="search-submit" value="GO" />
 									</fieldset>
 								</form>
