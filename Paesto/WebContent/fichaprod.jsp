@@ -76,8 +76,8 @@
 										class="dropdown-toggle" href="#"><span class="key">Categorias
 										</span><span class="value"></span><b class="caret"></b></a>
 										<ul class="dropdown-menu">
-											<li><a href="#">English</a></li>
-											<li><a href="#">French</a></li>
+											<li><a href="ServletCategoria?cat=blanco">Ron Blanco</a></li>
+											<li><a href="ServletCategoria?cat=ejo">Ron Añejo</a></li>
 										</ul></li>
 								</ul></li>
 							<li><a href="login.html">Login</a></li>
