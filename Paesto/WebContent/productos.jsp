@@ -31,7 +31,14 @@
 				<ul>
 					<li><a href="index.html">Inicio</a></li>
 					<li class="current_page_item"><a href="#">Productos</a></li>
-					<li><a href="#">Contacto</a></li>
+					<li class="dropdown dropdown-small"><a data-toggle="dropdown"
+						data-hover="dropdown" class="dropdown-toggle" href="#"><span
+							class="key">Categorías </span><span class="value"></span><b
+							class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="ServletCategoria?cat=blanco">Ron Blanco</a></li>
+							<li><a href="ServletCategoria?cat=ejo">Ron Añejo</a></li>
+						</ul></li>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
 					<li><a href="#">Carrito</a></li>
