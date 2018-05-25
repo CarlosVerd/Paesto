@@ -89,7 +89,7 @@
 							<div class="col-md-8">
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
-										<a href="index.html">Inicio</a> > <a href="">${producto.categoria}</a>
+										<a href="index.html">Inicio</a> > <a href="ServletCategoria?cat=${producto.categoria}">${producto.categoria}</a>
 										> <a href="">${producto.nombre}</a>
 									</div>
 
