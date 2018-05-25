@@ -12,6 +12,27 @@
 <title>Ronea Working</title>
 <link href="css/styleindex.css" rel="stylesheet" type="text/css"
 	media="screen" />
+<link
+	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100'
+	rel='stylesheet' type='text/css'>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+<!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
+<link rel="stylesheet" href="css/styleficha.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link href="css/styleindex.css" rel="stylesheet" type="text/css"
+	media="screen" />
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
 </head>
@@ -41,7 +62,6 @@
 						</ul></li>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
-					<li><a href="#">Carrito</a></li>
 				</ul>
 			</div>
 			<!-- end #menu -->
@@ -61,7 +81,8 @@
 												alt="" class="alignleft border" />
 										<p>${producto.descripcion}</p>
 										<form method="post" action="ServletBuscador">
-											<input type="submit" value='Ficha detallada' /> <input
+											<input type="submit" style="" 
+											value='Ficha detallada' /> <input
 												type="hidden" name="homeBuscador" id="homeBuscador"
 												value="${producto.nombre}" />
 										</form>
@@ -69,11 +90,6 @@
 								</div>
 							</c:forEach>
 						</div>
-
-
-
-
-
 
 						<!-- end #content -->
 						<div id="sidebar">
@@ -83,8 +99,9 @@
 								</h2>
 								<form method="get" action="ServletBuscador">
 									<fieldset>
-										<input type="text" name="homeBuscador" id="homeBuscador"
-											size="20" placeholder="introduce marca a buscar..." /> <input
+										<input style="color: black; width: 180px; height: 15px"
+											type="text" name="homeBuscador" id="homeBuscador"
+											placeholder="introduce marca a buscar..." /> <input
 											type="submit" id="search-submit" value="GO" />
 									</fieldset>
 								</form>
