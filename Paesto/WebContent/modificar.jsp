@@ -4,16 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/estilos.css" rel="stylesheet" type="text/css" />
+ <link href="css/otro.css" rel="stylesheet" type="text/css"  /> 
+        <link href="images/img01.jpg" />
 <title>Modificar Ronea Working</title>
 </head>
 <body>
-	<div id="contenedor">
+	<div class="contenedor">
 		<h2>Modificar Ronea Working</h2>
 		<div id="body">
 			<h3>MODIFICACIÓN DE LOS DATOS DE RON</h3>
 			<form action="ServeltGestion?operacion=actualizar" method="post">
-				<table border="1">
+				<table border="1" class="tabla">
 					<tr>
 						<th>Nombre</th>
 						<td><strong>${producto.nombre}</strong></td>
