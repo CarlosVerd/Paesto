@@ -89,8 +89,8 @@
 							<div class="col-md-8">
 								<div class="product-content-right">
 									<div class="product-breadcroumb">
-										<a href="index.html">Inicio</a> > <a href="">${producto.categoria}</a>
-										> <a href="">${producto.nombre}</a>
+										<a href="index.html">Inicio</a> > <a href="ServletCategoria?cat=${producto.categoria}">${producto.categoria}</a>
+										> <a href="ServletBuscador?homeBuscador=${producto.nombre}">${producto.nombre}</a>
 									</div>
 
 									<div class="row">
@@ -114,7 +114,7 @@
 
 												<form action="" class="cart">
 													<div class="quantity">
-														<input type="number" size="4" class="input-text qty text"
+														<input style="color: black" type="number" size="4" class="input-text qty text"
 															title="Qty" value="1" name="quantity" min="1" step="1">
 													</div>
 													<button class="add_to_cart_button" type="submit">Add
@@ -130,10 +130,10 @@
 
 												<div role="tabpanel">
 													<ul class="product-tab" role="tablist">
-														<li role="presentation" class="active"><a
+														<li role="presentation" class="active"><a style="color: orange"
 															href="#home" aria-controls="home" role="tab"
 															data-toggle="tab">${producto.categoria}</a></li>
-														<li role="presentation"><a href="#profile"
+														<li role="presentation"><a href="#profile" style="color: orange"
 															aria-controls="profile" role="tab" data-toggle="tab">Reviews</a></li>
 													</ul>
 													<div class="tab-content">
@@ -149,11 +149,11 @@
 															<h2>Reviews</h2>
 															<div class="submit-review">
 																<p>
-																	<label for="name">Name</label> <input name="name"
+																	<label for="name">Name</label> <input style="color: black" name="name"
 																		type="text">
 																</p>
 																<p>
-																	<label for="email">Email</label> <input name="email"
+																	<label for="email">Email</label> <input style="color: black" name="email"
 																		type="email">
 																</p>
 																<div class="rating-chooser">
@@ -167,7 +167,7 @@
 																</div>
 																<p>
 																	<label for="review">Your review</label>
-																	<textarea name="review" id="" cols="30" rows="10"></textarea>
+																	<textarea style="color: black" name="review" id="" cols="30" rows="10"></textarea>
 																</p>
 																<p>
 																	<input type="submit" value="Submit">
