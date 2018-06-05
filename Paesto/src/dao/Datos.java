@@ -25,7 +25,6 @@ public class Datos implements Idatos {
 
 			String driverClassName = "com.mysql.jdbc.Driver";
 			String driverUrl = "jdbc:mysql://10.90.36.7:3306/ventaron";
-
 			String user = "admin";
 			String password = "1111";
 
