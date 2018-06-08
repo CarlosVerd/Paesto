@@ -28,7 +28,7 @@
                         <c:forEach var="producto" items="${colron}">
                             <tr>
                                 <td>${producto.nombre}</td>
-                                <td>Prueba<!--  ${producto.descripcion}--></td>
+                                <td>El ron ${producto.nombre}...</td>
                                 <td>${producto.rutaImagen}</td>
                                 <td>${producto.categoria}</td>
                                 <td>${producto.precio}</td>
