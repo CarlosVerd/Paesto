@@ -59,7 +59,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="ServletCategoria?cat=blanco">Ron Blanco</a></li>
 							<li><a href="ServletCategoria?cat=ejo">Ron Añejo</a></li>
-						</ul></li>
+						</ul>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Registrarse</a></li>
 				</ul>
